@@ -1,0 +1,14 @@
+<div class="page-header">
+    <div
+        {{#if @image}}
+            style="background-image: url({{@image}})"
+        {{else}}
+            {{#if @blog.cover}}
+                style="background-image: url({{@blog.cover}})"
+            {{/if}}
+        {{/if}}
+    >
+HERE
+    </div>
+
+</div>
