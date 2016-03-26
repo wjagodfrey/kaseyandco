@@ -2,14 +2,18 @@
 
 .content {
   @include outer-container;
-  min-height: 100%;
+  // navigation
   padding-top: $navigation-height;
+
+  // sticky footer
+  min-height: 100%;
   margin-bottom: -$footer-height;
   &:after {
     content: "";
     display: block;
     height: $footer-height;
   }
+
   .content__main {
     @include span-columns(10);
     @include shift(1);

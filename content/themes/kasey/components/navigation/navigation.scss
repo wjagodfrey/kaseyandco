@@ -8,14 +8,15 @@
   height: $navigation-height;
   background: $white;
   text-align: center;
+
   ul.navigation__list {
     position: absolute;
     top: 50%;
     width: 100%;
     height: $navigation-height / 2;
     margin-top: -($navigation-height / 8);
-
     padding: 0;
+
     li.navigation__list-item {
       display: inline-block;
       padding: 0 1rem;
