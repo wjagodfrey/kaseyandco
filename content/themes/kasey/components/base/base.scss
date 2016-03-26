@@ -1,0 +1,34 @@
+@import '../config/config';
+
+html body {
+  height: 100vh;
+  font-family: Heiti SC;
+
+  h1 {
+    font-size: 2.5rem;
+    @include media($breakpoint-sm) {
+      font-size: 3.5rem;
+    }
+    @include media($breakpoint-md) {
+      font-size: 4.5rem;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+}
+
+

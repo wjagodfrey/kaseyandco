@@ -1,15 +1,29 @@
-@import 'bourbon';
-@import 'neat';
 @import '../config/config';
 
 .content {
-    @include outer-container;
-    .page-content {
-        @include span-columns(12);
-        @include shift(0);
-        @include media($breakpoint-sm) {
-            @include span-columns(8);
-            @include shift(2);
-        }
+  @include outer-container;
+  min-height: 100%;
+  margin-bottom: -$footer-height;
+  &:after {
+    content: "";
+    display: block;
+    height: $footer-height;
+  }
+  .content__main {
+    @include span-columns(10);
+    @include shift(1);
+    @include media($breakpoint-sm) {
+      @include span-columns(8);
+      @include shift(2);
     }
+    h1, h2, h3, h4, h5, h6 {
+      padding: 1rem 0 1.5rem 0;
+    }
+  }
+}
+
+.home-page {
+  .content__main {
+    padding: 4rem 0;
+  }
 }

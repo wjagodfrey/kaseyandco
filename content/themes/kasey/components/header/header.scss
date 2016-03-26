@@ -1,0 +1,26 @@
+@import '../config/config';
+
+header.header {
+  position: relative;
+  .header__background {
+    height: $header-height;
+    background-position: center;
+    background-size: cover;
+  }
+  .header__content {
+    height: $header-height;
+    text-align: center;
+    .header__logo {
+      position: relative;
+      top: 20%;
+      img {
+        @include filter(brightness(1000%));
+        height: $header-height / 2;
+      }
+    }
+    .header__text {
+      padding-top: 20%;
+      color: $white;
+    }
+  }
+}

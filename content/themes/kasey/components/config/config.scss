@@ -1,3 +1,19 @@
+@import 'bourbon';
+@import 'neat';
+
+// BREAKPOINTS
 $breakpoint-lg: 1080px;
-$breakpoint-md: 980px;
-$breakpoint-sm: 720px;
+$breakpoint-md: 800px;
+$breakpoint-sm: 600px;
+
+//COLORS
+$white: #ffffff;
+$black: #000000;
+
+// COMPONENTS
+$header-height: 50vw;
+
+$navigation-height: 20px;
+
+$footer-height: 40px;
+
