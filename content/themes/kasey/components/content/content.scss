@@ -3,6 +3,7 @@
 .content {
   @include outer-container;
   min-height: 100%;
+  padding-top: $navigation-height;
   margin-bottom: -$footer-height;
   &:after {
     content: "";

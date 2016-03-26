@@ -505,7 +505,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  box-sizing: border-box; }\n\n*, *::after, *::before {\n  box-sizing: inherit; }\n\n.content {\n  max-width: 1200px;\n  margin-left: auto;\n  margin-right: auto;\n  min-height: 100%;\n  margin-bottom: -40px; }\n  .content::after {\n    clear: both;\n    content: \"\";\n    display: table; }\n  .content:after {\n    content: \"\";\n    display: block;\n    height: 40px; }\n  .content .content__main {\n    float: left;\n    display: block;\n    margin-right: 2.35765%;\n    width: 82.94039%;\n    margin-left: 8.5298%; }\n    .content .content__main:last-child {\n      margin-right: 0; }\n    @media screen and (min-width: 600px) {\n      .content .content__main {\n        float: left;\n        display: block;\n        margin-right: 2.35765%;\n        width: 65.88078%;\n        margin-left: 17.05961%; }\n        .content .content__main:last-child {\n          margin-right: 0; } }\n    .content .content__main h1, .content .content__main h2, .content .content__main h3, .content .content__main h4, .content .content__main h5, .content .content__main h6 {\n      padding: 1rem 0 1.5rem 0; }\n\n.home-page .content__main {\n  padding: 4rem 0; }\n", ""]);
+	exports.push([module.id, "html {\n  box-sizing: border-box; }\n\n*, *::after, *::before {\n  box-sizing: inherit; }\n\n.content {\n  max-width: 1200px;\n  margin-left: auto;\n  margin-right: auto;\n  min-height: 100%;\n  padding-top: 40px;\n  margin-bottom: -40px; }\n  .content::after {\n    clear: both;\n    content: \"\";\n    display: table; }\n  .content:after {\n    content: \"\";\n    display: block;\n    height: 40px; }\n  .content .content__main {\n    float: left;\n    display: block;\n    margin-right: 2.35765%;\n    width: 82.94039%;\n    margin-left: 8.5298%; }\n    .content .content__main:last-child {\n      margin-right: 0; }\n    @media screen and (min-width: 600px) {\n      .content .content__main {\n        float: left;\n        display: block;\n        margin-right: 2.35765%;\n        width: 65.88078%;\n        margin-left: 17.05961%; }\n        .content .content__main:last-child {\n          margin-right: 0; } }\n    .content .content__main h1, .content .content__main h2, .content .content__main h3, .content .content__main h4, .content .content__main h5, .content .content__main h6 {\n      padding: 1rem 0 1.5rem 0; }\n\n.home-page .content__main {\n  padding: 4rem 0; }\n", ""]);
 
 	// exports
 
@@ -625,7 +625,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  box-sizing: border-box; }\n\n*, *::after, *::before {\n  box-sizing: inherit; }\n\n.navigation {\n  display: none; }\n", ""]);
+	exports.push([module.id, "html {\n  box-sizing: border-box; }\n\n*, *::after, *::before {\n  box-sizing: inherit; }\n\n.navigation {\n  position: fixed;\n  top: 0;\n  z-index: 1000;\n  width: 100%;\n  height: 40px;\n  background: #ffffff;\n  text-align: center; }\n  .navigation ul.navigation__list {\n    position: absolute;\n    top: 50%;\n    width: 100%;\n    height: 20px;\n    margin-top: -5px;\n    padding: 0; }\n    .navigation ul.navigation__list li.navigation__list-item {\n      display: inline-block;\n      padding: 0 1rem; }\n      .navigation ul.navigation__list li.navigation__list-item a.navigation__list-item-link {\n        text-decoration: none;\n        color: #000000;\n        font-weight: 700; }\n", ""]);
 
 	// exports
 
