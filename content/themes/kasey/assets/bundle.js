@@ -665,7 +665,7 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license
@@ -22436,7 +22436,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  box-sizing: border-box; }\n\n*, *::after, *::before {\n  box-sizing: inherit; }\n\nheader.header {\n  position: relative; }\n  header.header .header__background {\n    height: 50vw;\n    background-position: center;\n    background-size: cover; }\n  header.header .header__content {\n    height: 50vw;\n    text-align: center; }\n    header.header .header__content .header__logo {\n      position: relative;\n      top: 20%; }\n      header.header .header__content .header__logo img {\n        -webkit-filter: brightness(1000%);\n        filter: brightness(1000%);\n        height: 25vw; }\n    header.header .header__content .header__text {\n      padding-top: 20%;\n      color: #ffffff; }\n", ""]);
+	exports.push([module.id, "html {\n  box-sizing: border-box; }\n\n*, *::after, *::before {\n  box-sizing: inherit; }\n\nheader.header {\n  position: relative; }\n  header.header .header__background {\n    height: 50vw;\n    background-position: center;\n    background-size: cover; }\n  header.header .header__content {\n    height: 50vw;\n    text-align: center; }\n    header.header .header__content .header__logo {\n      position: relative;\n      top: 20%; }\n      header.header .header__content .header__logo img {\n        -webkit-filter: brightness(0) invert(1);\n        filter: brightness(0) invert(1);\n        height: 25vw; }\n    header.header .header__content .header__text {\n      padding-top: 20%;\n      color: #ffffff; }\n", ""]);
 
 	// exports
 

@@ -14,7 +14,7 @@ header.header {
       position: relative;
       top: 20%;
       img {
-        @include filter(brightness(1000%));
+        @include filter(brightness(0) invert(1));
         height: $header-height / 2;
       }
     }
