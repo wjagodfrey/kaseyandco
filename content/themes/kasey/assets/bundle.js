@@ -185,8 +185,6 @@
 
 	      // post list
 	      var Posts = this.state.posts.map(function (post) {
-	        console.log(post); //DEV
-
 	        return React.createElement(
 	          'article',
 	          { key: post.id },
@@ -237,8 +235,6 @@
 	    _updatePage: function _updatePage(pageNumber) {
 	      var _this2 = this;
 
-	      console.log('page:', pageNumber);
-
 	      // update hash params
 	      var queryParams = queryString.parse(global.location.hash);
 	      queryParams.page = pageNumber;
@@ -256,7 +252,6 @@
 	        }
 	        return response.json();
 	      }).then(function (result) {
-	        console.log(result);
 	        result.posts = result.posts.map(function (post) {
 	          // format post preview html
 	          post.preview_html = { __html: '' };
@@ -266,7 +261,6 @@
 
 	          // attempt to find the '#post-preview-end' element
 	          var previewEndMarker = parser.querySelector('p > #post-preview-end');
-	          console.log(1, previewEndMarker);
 
 	          // if we have a marker, get its parent
 	          if (previewEndMarker) {
@@ -274,29 +268,24 @@
 	            // otherwise attemtpt to get up to second paragraph if no '#post-preview-end' element
 	          } else {
 	              previewEndMarker = parser.querySelector('p:nth-child(' + (defaultPreviewParagraphCount + 1) + ')');
-	              console.log(2, previewEndMarker);
 	            }
 
 	          // get HTML up to '#post-preview-end' element
 	          if (previewEndMarker) {
-	            console.log(3);
 	            var parserChildren = Array.prototype.slice.call(parser.children);
 	            var indexOfMarker = parserChildren.indexOf(previewEndMarker);
 	            if (indexOfMarker > -1) {
 	              (function () {
 	                var previewChildren = parserChildren.splice(0, indexOfMarker);
-	                console.log(previewChildren);
 	                var previewParser = global.document.createElement('span');
 	                previewChildren.forEach(function (child) {
 	                  previewParser.appendChild(child);
 	                });
-	                console.log(previewParser.innerHTML);
 	                post.preview_html.__html = previewParser.innerHTML;
 	              })();
 	            }
 	            // Otherwise, get whole document text.
 	          } else {
-	              console.log(4);
 	              post.preview_html.__html = post.html;
 	            }
 
@@ -324,7 +313,7 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license

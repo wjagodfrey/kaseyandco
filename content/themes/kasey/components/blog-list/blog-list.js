@@ -70,8 +70,6 @@ if (containerEl) {
 
       // post list
       let Posts = this.state.posts.map((post) => {
-        console.log(post);//DEV
-
         return <article key={post.id}>
           <header className="blog-list__header">
             <h2 className="blog-list__title"><a href={post.url}>{post.title}</a></h2>
@@ -101,8 +99,6 @@ if (containerEl) {
      * ======================
      */
     _updatePage: function(pageNumber) {
-      console.log('page:', pageNumber);
-
       // update hash params
       let queryParams = queryString.parse(global.location.hash);
       queryParams.page = pageNumber;
@@ -122,7 +118,6 @@ if (containerEl) {
           return response.json();
         })
       .then((result) => {
-        console.log(result);
         result.posts = result.posts.map(function(post) {
           // format post preview html
           post.preview_html = {__html: ''};
@@ -132,7 +127,6 @@ if (containerEl) {
 
           // attempt to find the '#post-preview-end' element
           let previewEndMarker = parser.querySelector('p > #post-preview-end');
-          console.log(1, previewEndMarker);
 
           // if we have a marker, get its parent
           if (previewEndMarker) {
@@ -140,27 +134,22 @@ if (containerEl) {
           // otherwise attemtpt to get up to second paragraph if no '#post-preview-end' element
           } else {
             previewEndMarker = parser.querySelector(`p:nth-child(${defaultPreviewParagraphCount + 1})`);
-            console.log(2, previewEndMarker);
           }
 
           // get HTML up to '#post-preview-end' element
           if (previewEndMarker) {
-            console.log(3);
             let parserChildren = Array.prototype.slice.call(parser.children);
             let indexOfMarker = parserChildren.indexOf(previewEndMarker);
             if (indexOfMarker > -1) {
               let previewChildren = parserChildren.splice(0,indexOfMarker);
-              console.log(previewChildren);
               let previewParser = global.document.createElement('span');
               previewChildren.forEach((child) => {
                 previewParser.appendChild(child);
               });
-              console.log(previewParser.innerHTML);
               post.preview_html.__html = previewParser.innerHTML;
             }
           // Otherwise, get whole document text.
           } else {
-            console.log(4);
             post.preview_html.__html = post.html;
           }
 
