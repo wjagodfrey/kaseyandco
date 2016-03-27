@@ -1,23 +1,23 @@
 <header class="header">
-    <div
-        class="header__background"
-        {{! set the backgorund image. Use the blog image if no plage image is defined.}}
-        {{#if post.image}}
-            style="background-image: url({{post.image}})"
-        {{else}}
-            {{#if @blog.cover}}
-            style="background-image: url({{@blog.cover}})"
-            {{/if}}
-        {{/if}}
+  <div
+    class="header__background"
+    {{! set the background image. Use the blog image if no page image is defined.}}
+    {{#if post.image}}
+    style="background-image: url({{post.image}})"
+    {{else}}
+    {{#if @blog.cover}}
+    style="background-image: url({{@blog.cover}})"
+    {{/if}}
+    {{/if}}
     >
-        <div class="header__content">
-            {{#is 'home'}}
-                <a class="header__logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
-            {{else}}
-                <div class="header__text">
-                    <h1>{{@blog.title}}</h1>
-                </div>
-            {{/is}}
-        </div>
+    <div class="header__content">
+      {{#is 'home'}}
+      <a class="header__logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+      {{else}}
+      <div class="header__text">
+        <h1>{{@blog.title}}</h1>
+      </div>
+      {{/is}}
     </div>
+  </div>
 </header>
