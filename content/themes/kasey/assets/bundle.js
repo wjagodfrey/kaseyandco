@@ -68,7 +68,8 @@
 		"./header/header.scss": 185,
 		"./navigation/navigation.scss": 187,
 		"./page-content/page-content.scss": 189,
-		"./pagination/pagination.scss": 191
+		"./pagination/pagination.scss": 191,
+		"./post/post.scss": 193
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -313,7 +314,7 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license
@@ -21722,6 +21723,13 @@
 /***/ },
 /* 190 */,
 /* 191 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 192 */,
+/* 193 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

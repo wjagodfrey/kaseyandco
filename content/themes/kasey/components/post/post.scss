@@ -1,0 +1,51 @@
+@import '../config/config';
+
+.post {
+  .post__header {
+    position: relative;
+    .post__header-background {
+      height: $post__header-height;
+      background-position: center;
+      background-size: cover;
+      .post__header-content {
+        position: absolute;
+        top: 37%;
+        width: 100%;
+        text-align: center;
+        .post__header-content-text {
+          color: $white;
+          .post__title {
+            top: -0.5rem;
+            position: relative;
+          }
+          .post__date {
+            top: 0;
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+  .post__wrapper {
+    .post__header {
+
+    }
+    .post__content {
+      padding: 2rem 0;
+    }
+    .post__footer {
+    }
+  }
+  .post__read-other {
+    position: relative;
+    .post__read-other-post {
+      position: absolute;
+      &.post__read-other-post--prev {
+        right: 0;
+      }
+      &.post__read-other-post--next {
+        left: 0;
+      }
+    }
+  }
+}

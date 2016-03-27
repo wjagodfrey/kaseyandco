@@ -2,6 +2,8 @@
 
 .content {
   @include outer-container;
+  max-width: 100% !important;
+
   // navigation
   padding-top: $navigation-height;
 
@@ -23,6 +25,12 @@
       @include span-columns(8);
       @include shift(2);
     }
+
+    @include media($breakpoint-lg) {
+      @include span-columns(6);
+      @include shift(3);
+    }
+
     h1, h2, h3, h4, h5, h6 {
       padding: 1rem 0 1.5rem 0;
     }
