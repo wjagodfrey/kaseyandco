@@ -2,8 +2,8 @@
     <div
         class="header__background"
         {{! set the backgorund image. Use the blog image if no plage image is defined.}}
-        {{#if @image}}
-            style="background-image: url({{@image}})"
+        {{#if post.image}}
+            style="background-image: url({{post.image}})"
         {{else}}
             {{#if @blog.cover}}
             style="background-image: url({{@blog.cover}})"
@@ -11,15 +11,13 @@
         {{/if}}
     >
         <div class="header__content">
-            <!-- <h1>Kasey and Co.</h1> -->
             {{#is 'home'}}
-            <a class="header__logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
+                <a class="header__logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="{{@blog.title}}" /></a>
             {{else}}
-            <div class="header__text">
-                <h1>{{@blog.title}}</h1>
-            </div>
+                <div class="header__text">
+                    <h1>{{@blog.title}}</h1>
+                </div>
             {{/is}}
-
         </div>
     </div>
 </header>

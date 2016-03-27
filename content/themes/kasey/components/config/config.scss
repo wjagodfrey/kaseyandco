@@ -9,6 +9,9 @@ $breakpoint-sm: 600px;
 //COLORS
 $white: #ffffff;
 $black: #000000;
+$grey: gray;
+$grey-light: lighten($grey, 20%);
+$grey-lighter: lighten($grey, 35%);
 
 // COMPONENTS
 $header-height: 50vw;

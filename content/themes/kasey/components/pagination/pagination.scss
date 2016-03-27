@@ -1,0 +1,13 @@
+.pagination {
+  position: relative;
+  padding: 1.5rem 0;
+  .pagination__link {
+    position: absolute;
+    &.pagination__link--newer-posts {
+      left: 0;
+    }
+    &.pagination__link--older-posts {
+      right: 0;
+    }
+  }
+}

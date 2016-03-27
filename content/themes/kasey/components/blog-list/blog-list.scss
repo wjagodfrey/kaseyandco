@@ -1,0 +1,17 @@
+@import '../config/config';
+
+.blog-list {
+  .blog-list__author-thumb {
+    width: 40px;
+    height: 40px;
+  }
+  .blog-list__tags {
+    .blog-list__tag {
+      background: $grey-lighter;
+      &:not(:first-child) {
+        margin: 0.3rem 0;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+}

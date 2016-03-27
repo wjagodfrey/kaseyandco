@@ -1,9 +1,5 @@
 {{! This is the post loop - each post will be output using this markup }}
-{{#get "posts" include="tags,author"}}
-    {{! Previous/next page links - only displayed on page 2+ }}
-    <div class="extra-pagination inner">
-        {{pagination}}
-    </div>
+{{#get "posts" limit=@blog.posts_per_page include="tags,author"}}
 
     {{#foreach posts}}
     <article class="{{post_class}}">

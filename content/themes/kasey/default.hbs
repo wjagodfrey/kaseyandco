@@ -16,6 +16,12 @@
 
         {{! Ghost outputs important style and meta data with this tag }}
         {{ghost_head}}
+
+        <script type="text/javascript">
+            window._GhostConfiguration = {
+                postsPerPage: {{@blog.posts_per_page}}
+            };
+        </script>
     </head>
     <body class="{{body_class}}">
 

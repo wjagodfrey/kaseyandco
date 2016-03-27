@@ -1,0 +1,173 @@
+'use strict';
+
+module.exports = {
+  blogList: {
+    previewLength: 300
+  }
+};
+html body {
+  height: 100vh;
+  font-family: Heiti SC;
+
+  h1 {
+    font-size: 2.5rem;
+    @include media($breakpoint-sm) {
+      font-size: 3.5rem;
+    }
+    @include media($breakpoint-md) {
+      font-size: 4.5rem;
+    }
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  h5 {
+    font-size: 1rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+}
+
+
+.content {
+  @include outer-container;
+  // navigation
+  padding-top: $navigation-height;
+
+  // sticky footer
+  min-height: 100%;
+  margin-bottom: -$footer-height;
+  &:after {
+    content: "";
+    display: block;
+    height: $footer-height;
+  }
+
+  .content__main {
+    @include span-columns(10);
+    @include shift(1);
+    padding: 4rem 0;
+
+    @include media($breakpoint-sm) {
+      @include span-columns(8);
+      @include shift(2);
+    }
+    h1, h2, h3, h4, h5, h6 {
+      padding: 1rem 0 1.5rem 0;
+    }
+  }
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+
+q {
+  &:before, &:after {
+    content: '';
+    content: none; } }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+.footer {
+  height: $footer-height;
+}
+header.header {
+  position: relative;
+  .header__background {
+    height: $header-height;
+    background-position: center;
+    background-size: cover;
+  }
+  .header__content {
+    height: $header-height;
+    text-align: center;
+    .header__logo {
+      position: relative;
+      top: 20%;
+      img {
+        @include filter(brightness(1000%));
+        height: $header-height / 2;
+      }
+    }
+    .header__text {
+      padding-top: 20%;
+      color: $white;
+    }
+  }
+}
+.navigation {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: $navigation-height;
+  background: $white;
+  text-align: center;
+
+  ul.navigation__list {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: $navigation-height / 2;
+    margin-top: -($navigation-height / 8);
+    padding: 0;
+
+    li.navigation__list-item {
+      display: inline-block;
+      padding: 0 1rem;
+      a.navigation__list-item-link {
+        text-decoration: none;
+        color: $black;
+        font-weight: 700;
+      }
+    }
+  }
+}
+.content {
+  @include outer-container;
+  .page-content {
+    @include span-columns(12);
+    @include shift(0);
+    @include media($breakpoint-sm) {
+      @include span-columns(8);
+      @include shift(2);
+    }
+  }
+}
