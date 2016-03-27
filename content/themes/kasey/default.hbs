@@ -17,6 +17,10 @@
         {{! Ghost outputs important style and meta data with this tag }}
         {{ghost_head}}
 
+        {{! Theme styles.css}}
+        <link rel="stylesheet" type="text/css" href="{{asset "styles.css"}}">
+
+        {{! Ghost js config}}
         <script type="text/javascript">
             window._GhostConfiguration = {
                 postsPerPage: {{@blog.posts_per_page}}

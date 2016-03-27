@@ -1,13 +1,16 @@
 'use strict';
 
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const chalk = require('chalk');
 
+let sassLoaderPaths = ([]).concat(require('bourbon').includePaths, require('bourbon-neat').includePaths);
+
 let compiler = webpack({
-  entry: "./entry",
+  entry: './entry',
   output: {
-    path: "./assets",
-    filename: "bundle.js"
+    path: './assets',
+    filename: 'bundle.js'
   },
   module: {
     loaders: [
@@ -21,13 +24,16 @@ let compiler = webpack({
     },
     {
       test: /\.scss$/,
-      loaders: ["style", "css", "sass"]
+      loader: ExtractTextPlugin.extract('style', `css!sass?${JSON.stringify({includePaths:sassLoaderPaths})}`)
     }
     ]
   },
   sassLoader: {
-    includePaths: ([]).concat(require("bourbon").includePaths, require("bourbon-neat").includePaths)
-  }
+    includePaths: ([]).concat(require('bourbon').includePaths, require('bourbon-neat').includePaths)
+  },
+  plugins: [
+    new ExtractTextPlugin('styles.css'),
+  ]
 });
 
 compiler.watch({
