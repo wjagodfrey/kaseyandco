@@ -4,8 +4,10 @@
     width: 100%;
   }
   p {
-    line-height: 1.5rem;
     margin: 1.5rem 0;
+    line-height: 1.5rem;
+    text-align: justify;
+    text-justify: inter-word;
     &:first-child {
       margin-top: 0;
     }

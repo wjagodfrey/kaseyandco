@@ -57,8 +57,10 @@ html {
     .blog-list .blog-list__post .blog-list__excerpt img {
       width: 100%; }
     .blog-list .blog-list__post .blog-list__excerpt p {
+      margin: 1.5rem 0;
       line-height: 1.5rem;
-      margin: 1.5rem 0; }
+      text-align: justify;
+      text-justify: inter-word; }
       .blog-list .blog-list__post .blog-list__excerpt p:first-child {
         margin-top: 0; }
       .blog-list .blog-list__post .blog-list__excerpt p:last-child {
@@ -345,8 +347,10 @@ html {
   .post .post__wrapper .post__content img {
     width: 100%; }
   .post .post__wrapper .post__content p {
+    margin: 1.5rem 0;
     line-height: 1.5rem;
-    margin: 1.5rem 0; }
+    text-align: justify;
+    text-justify: inter-word; }
     .post .post__wrapper .post__content p:first-child {
       margin-top: 0; }
     .post .post__wrapper .post__content p:last-child {
