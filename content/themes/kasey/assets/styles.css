@@ -121,7 +121,7 @@ html {
   max-width: 100% !important;
   padding-top: 40px;
   min-height: 100%;
-  margin-bottom: -40px; }
+  margin-bottom: -65px; }
   .content::after {
     clear: both;
     content: "";
@@ -129,7 +129,7 @@ html {
   .content:after {
     content: "";
     display: block;
-    height: 40px; }
+    height: 65px; }
   .content .content__main {
     float: left;
     display: block;
@@ -202,10 +202,16 @@ html {
 
 /* Coolors Exported Palette - coolors.co/0d677b-4a4e69-948b99-edbbba-f2e9e4 */
 .footer {
-  height: 40px;
+  text-align: center;
+  height: 65px;
+  line-height: 65px;
+  vertical-align: middle;
   font-size: 0.85rem;
-  font-weight: 700;
-  text-align: center; }
+  font-weight: bold; }
+  .footer .footer__content {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal; }
 html {
   box-sizing: border-box; }
 
@@ -370,7 +376,7 @@ html {
     background-position: center;
     background-size: cover;
     overflow: hidden;
-    min-height: 14rem; }
+    min-height: 20rem; }
     .post .post__header .post__header-background .post__header-content {
       float: left;
       display: block;
@@ -379,7 +385,7 @@ html {
       margin-left: 8.5298%;
       padding: 2rem 0;
       text-align: center;
-      line-height: 14rem; }
+      line-height: 20rem; }
       .post .post__header .post__header-background .post__header-content:last-child {
         margin-right: 0; }
       @media screen and (min-width: 600px) {
@@ -424,7 +430,7 @@ html {
       margin-bottom: 0; }
 
 .post .post__read-other .post__read-other-post {
-  padding: 2rem 0; }
+  padding: 2rem 0 1rem; }
   .post .post__read-other .post__read-other-post.post__read-other-post--prev {
     float: right; }
   .post .post__read-other .post__read-other-post.post__read-other-post--next {

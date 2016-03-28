@@ -1,8 +1,15 @@
 @import '../config/config';
 
 .footer {
-  height: $footer-height;
-  font-size: 0.85rem;
-  font-weight: 700;
   text-align: center;
+  height: $footer-height;
+  line-height: $footer-height;
+  vertical-align: middle;
+  font-size: 0.85rem;
+  font-weight: bold;
+  .footer__content {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }
 }
