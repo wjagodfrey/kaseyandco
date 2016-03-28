@@ -1,17 +1,23 @@
 @import '../config/config';
 
 .blog-list {
-  .blog-list__author-thumb {
-    width: 40px;
-    height: 40px;
-  }
-  .blog-list__tags {
-    .blog-list__tag {
-      background: $grey-lighter;
-      &:not(:first-child) {
-        margin: 0.3rem 0;
-        margin-left: 0.5rem;
+  .blog-list__post {
+    padding: 2rem 0;
+    .blog-list__header {
+      text-align: center;
+      a {
+        text-decoration: none;
       }
+    }
+    .blog-list__excerpt {
+      @include post-formatting;
+      h1, h2, h3, h4, h5, h6 {
+        font-size: 0.6em;
+      }
+    }
+    .blog-list__read-more {
+      margin-top: 0.7rem;
+      display: block;
     }
   }
 }

@@ -1,5 +1,13 @@
 @import 'bourbon';
 @import 'neat';
+@import '../mixins/mixins';
+
+/* Coolors Exported Palette - coolors.co/0d677b-4a4e69-948b99-edbbba-f2e9e4 */
+$blue: #0d677b;
+$storm: #4a4e69;
+$grave: #948b99;
+$salmon: #edbbba;
+$beige: #f2e9e4;
 
 // BREAKPOINTS
 $breakpoint-lg: 1080px;
@@ -9,16 +17,18 @@ $breakpoint-sm: 600px;
 //COLORS
 $white: #ffffff;
 $black: #000000;
-$grey: gray;
+$grey: $grave;
 $grey-light: lighten($grey, 20%);
 $grey-lighter: lighten($grey, 35%);
 
 // COMPONENTS
-$header-height: 50vw;
+$base-text-color: $storm;
 
-$post__header-height: 30vh;
+$home__header-height: 75vh;
+$page__header-height: 50vh;
+
+$post__header--min-height: 14rem;
 
 $navigation-height: 40px;
 
 $footer-height: 40px;
-

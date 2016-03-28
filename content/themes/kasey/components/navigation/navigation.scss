@@ -9,6 +9,16 @@
   background: $white;
   text-align: center;
 
+  .navigation__logo {
+    background-image: url(/assets/images/nav_logo.png);
+    background-size: contain;
+    display: block;
+    margin-top: $navigation-height * 0.1;
+    margin-left: 0.3rem;
+    width: $navigation-height * 0.6;
+    height: $navigation-height * 0.8;
+  }
+
   ul.navigation__list {
     position: absolute;
     top: 50%;
@@ -22,7 +32,7 @@
       padding: 0 1rem;
       a.navigation__list-item-link {
         text-decoration: none;
-        color: $black;
+        color: $base-text-color;
         font-weight: 700;
       }
     }

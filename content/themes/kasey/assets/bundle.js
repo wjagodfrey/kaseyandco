@@ -66,10 +66,11 @@
 		"./css-reset/css-reset.scss": 181,
 		"./footer/footer.scss": 183,
 		"./header/header.scss": 185,
-		"./navigation/navigation.scss": 187,
-		"./page-content/page-content.scss": 189,
-		"./pagination/pagination.scss": 191,
-		"./post/post.scss": 193
+		"./mixins/mixins.scss": 187,
+		"./navigation/navigation.scss": 189,
+		"./page-content/page-content.scss": 191,
+		"./pagination/pagination.scss": 193,
+		"./post/post.scss": 195
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -179,7 +180,7 @@
 	              },
 	              href: "#page=" + pagination.next
 	            },
-	            'Older Posts →'
+	            'Older →'
 	          ) : ''
 	        )
 	      );
@@ -188,7 +189,7 @@
 	      var Posts = this.state.posts.map(function (post) {
 	        return React.createElement(
 	          'article',
-	          { key: post.id },
+	          { className: 'blog-list__post', key: post.id },
 	          React.createElement(
 	            'header',
 	            { className: 'blog-list__header' },
@@ -21730,6 +21731,13 @@
 /***/ },
 /* 192 */,
 /* 193 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 194 */,
+/* 195 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

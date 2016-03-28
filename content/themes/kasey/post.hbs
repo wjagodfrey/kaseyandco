@@ -5,7 +5,11 @@ the {body} of the default.hbs template, which contains our header/footer. }}
 
 {{#post}}
 <div class="post-page post">
-  <header class="post__header">
+  <header class="post__header
+    {{#unless image}}
+    post__header--no-image
+    {{/unless}} 
+    ">
     <div
       class="post__header-background"
       {{#if image}}
@@ -32,7 +36,7 @@ the {body} of the default.hbs template, which contains our header/footer. }}
         <footer class="post__footer">
 
           <section class="post__share">
-            <h4>Share this post</h4>
+            <h4>Share</h4>
             <a class="icon-twitter" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
               onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
               <span class="hidden">Twitter</span>
@@ -55,12 +59,12 @@ the {body} of the default.hbs template, which contains our header/footer. }}
     <aside class="post__read-other">
       {{#next_post}}
       <a class="post__read-other-post post__read-other-post--next" href="{{url}}">
-        Read{{title}}
+        &larr; Newer
       </a>
       {{/next_post}}
       {{#prev_post}}
       <a class="post__read-other-post post__read-other-post--prev" href="{{url}}">
-        {{title}}
+        Older &rarr;
       </a>
       {{/prev_post}}
     </aside>

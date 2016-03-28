@@ -17,19 +17,7 @@
   }
 
   .content__main {
-    @include span-columns(10);
-    @include shift(1);
-    padding: 4rem 0;
-
-    @include media($breakpoint-sm) {
-      @include span-columns(8);
-      @include shift(2);
-    }
-
-    @include media($breakpoint-lg) {
-      @include span-columns(6);
-      @include shift(3);
-    }
+    @include main-content-grid;
 
     h1, h2, h3, h4, h5, h6 {
       padding: 1rem 0 1.5rem 0;

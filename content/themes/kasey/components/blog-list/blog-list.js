@@ -63,14 +63,14 @@ if (containerEl) {
               className="pagination__link pagination__link--older-posts"
               onClick={(e)=>this._onPaginationClick(e, pagination.next)}
               href={"#page=" + pagination.next}
-            >Older Posts &rarr;</a>
+            >Older &rarr;</a>
           ) : ''}
         </nav>
       </div>
 
       // post list
       let Posts = this.state.posts.map((post) => {
-        return <article key={post.id}>
+        return <article className="blog-list__post" key={post.id}>
           <header className="blog-list__header">
             <h2 className="blog-list__title"><a href={post.url}>{post.title}</a></h2>
           </header>

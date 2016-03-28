@@ -2,25 +2,39 @@
 
 .header {
   position: relative;
+  margin-bottom: 3rem;
   .header__background {
-    height: $header-height;
+    height: $page__header-height;
     background-position: center;
     background-size: cover;
-  }
-  .header__content {
-    height: $header-height;
-    text-align: center;
-    .header__logo {
-      position: relative;
-      top: 20%;
-      img {
-        @include filter(brightness(0) invert(1));
-        height: $header-height / 2;
+    .header__content {
+      text-align: center;
+      .header__logo {
+        position: relative;
+        top: 0;
+        img {
+          @include filter(brightness(0) invert(1));
+          height: $page__header-height;
+        }
+      }
+      .header__text {
+        padding-top: 20%;
+        color: $white;
       }
     }
-    .header__text {
-      padding-top: 20%;
-      color: $white;
+  }
+}
+
+// header 
+.home-page {
+  .header__background {
+    height: $home__header-height;
+    .header__content {
+      .header__logo {
+        img {
+          height: $home__header-height;
+        }
+      }
     }
   }
 }
