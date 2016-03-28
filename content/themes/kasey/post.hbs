@@ -59,12 +59,12 @@ the {body} of the default.hbs template, which contains our header/footer. }}
     <aside class="post__read-other">
       {{#next_post}}
       <a class="post__read-other-post post__read-other-post--next" href="{{url}}">
-        &larr; Newer
+        <i class="fa fa-angle-left"></i> Newer
       </a>
       {{/next_post}}
       {{#prev_post}}
       <a class="post__read-other-post post__read-other-post--prev" href="{{url}}">
-        Older &rarr;
+        Older <i class="fa fa-angle-right"></i>
       </a>
       {{/prev_post}}
     </aside>

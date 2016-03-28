@@ -55,7 +55,7 @@ if (containerEl) {
               className="pagination__link pagination__link--newer-posts"
               onClick={(e)=>this._onPaginationClick(e, pagination.prev)}
               href={"#page=" + pagination.prev}
-            >&larr; Newer Posts</a>
+            ><i className="fa fa-angle-left"></i> Newer Posts</a>
           ) : ''}
 
           {(pagination.next) ? (
@@ -63,7 +63,7 @@ if (containerEl) {
               className="pagination__link pagination__link--older-posts"
               onClick={(e)=>this._onPaginationClick(e, pagination.next)}
               href={"#page=" + pagination.next}
-            >Older &rarr;</a>
+            >Older <i className="fa fa-angle-right"></i></a>
           ) : ''}
         </nav>
       </div>

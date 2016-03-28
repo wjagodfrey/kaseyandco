@@ -169,7 +169,8 @@
 	              },
 	              href: "#page=" + pagination.prev
 	            },
-	            '← Newer Posts'
+	            React.createElement('i', { className: 'fa fa-angle-left' }),
+	            ' Newer Posts'
 	          ) : '',
 	          pagination.next ? React.createElement(
 	            'a',
@@ -180,7 +181,8 @@
 	              },
 	              href: "#page=" + pagination.next
 	            },
-	            'Older →'
+	            'Older ',
+	            React.createElement('i', { className: 'fa fa-angle-right' })
 	          ) : ''
 	        )
 	      );
@@ -315,7 +317,7 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license
