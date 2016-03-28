@@ -66,6 +66,8 @@
 		"./css-reset/css-reset.scss": 181,
 		"./footer/footer.scss": 183,
 		"./header/header.scss": 185,
+		"./header/home-header.scss": 197,
+		"./header/page-header.scss": 199,
 		"./mixins/mixins.scss": 187,
 		"./navigation/navigation.scss": 189,
 		"./page-content/page-content.scss": 191,
@@ -196,7 +198,7 @@
 	            'header',
 	            { className: 'blog-list__header' },
 	            React.createElement(
-	              'h2',
+	              'h3',
 	              { className: 'blog-list__title' },
 	              React.createElement(
 	                'a',
@@ -317,7 +319,7 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license
@@ -21740,6 +21742,20 @@
 /***/ },
 /* 194 */,
 /* 195 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 196 */,
+/* 197 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 198 */,
+/* 199 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

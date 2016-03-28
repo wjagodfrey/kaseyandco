@@ -72,7 +72,7 @@ if (containerEl) {
       let Posts = this.state.posts.map((post) => {
         return <article className="blog-list__post" key={post.id}>
           <header className="blog-list__header">
-            <h2 className="blog-list__title"><a href={post.url}>{post.title}</a></h2>
+            <h3 className="blog-list__title"><a href={post.url}>{post.title}</a></h3>
           </header>
           <section className="blog-list__excerpt">
             <div>

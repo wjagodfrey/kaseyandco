@@ -1,0 +1,13 @@
+<header class="header">
+  <div
+    class="header__background"
+    {{! set the background image. Use the blog image if no page image is defined.}}
+    {{#if post.image}}
+    style="background-image: url({{post.image}})"
+    {{/if}}
+    >
+    <div class="header__content">
+        <h1>{{title}}</h1>
+    </div>
+  </div>
+</header>

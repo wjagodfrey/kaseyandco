@@ -28,14 +28,44 @@ html body {
         font-size: 4.5rem; } }
   html body h2 {
     font-size: 2rem; }
+    @media screen and (min-width: 600px) {
+      html body h2 {
+        font-size: 3rem; } }
+    @media screen and (min-width: 800px) {
+      html body h2 {
+        font-size: 4rem; } }
   html body h3 {
-    font-size: 2rem; }
+    font-size: 1.66rem; }
+    @media screen and (min-width: 600px) {
+      html body h3 {
+        font-size: 2.66rem; } }
+    @media screen and (min-width: 800px) {
+      html body h3 {
+        font-size: 3.5rem; } }
   html body h4 {
     font-size: 1.5rem; }
+    @media screen and (min-width: 600px) {
+      html body h4 {
+        font-size: 2.33rem; } }
+    @media screen and (min-width: 800px) {
+      html body h4 {
+        font-size: 3rem; } }
   html body h5 {
-    font-size: 1rem; }
+    font-size: 1.33rem; }
+    @media screen and (min-width: 600px) {
+      html body h5 {
+        font-size: 2rem; } }
+    @media screen and (min-width: 800px) {
+      html body h5 {
+        font-size: 2.5rem; } }
   html body h6 {
-    font-size: 1rem; }
+    font-size: 1.15rem; }
+    @media screen and (min-width: 600px) {
+      html body h6 {
+        font-size: 1.5rem; } }
+    @media screen and (min-width: 800px) {
+      html body h6 {
+        font-size: 2rem; } }
 html {
   box-sizing: border-box; }
 
@@ -176,6 +206,43 @@ html {
   font-size: 0.85rem;
   font-weight: 700;
   text-align: center; }
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/* Coolors Exported Palette - coolors.co/0d677b-4a4e69-948b99-edbbba-f2e9e4 */
+.header {
+  position: relative;
+  margin-bottom: 3rem; }
+  .header .header__background {
+    height: 50vh;
+    background-position: center;
+    background-size: cover; }
+    .header .header__background .header__content {
+      text-align: center; }
+      .header .header__background .header__content .header__logo {
+        position: relative;
+        top: 0; }
+        .header .header__background .header__content .header__logo img {
+          -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+          height: 50vh; }
+      .header .header__background .header__content .header__text {
+        padding-top: 20%;
+        color: #ffffff; }
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/* Coolors Exported Palette - coolors.co/0d677b-4a4e69-948b99-edbbba-f2e9e4 */
+.home-page .header__background {
+  height: 75vh; }
+  .home-page .header__background .header__content .header__logo img {
+    height: 75vh; }
 html {
   box-sizing: border-box; }
 

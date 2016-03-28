@@ -1,0 +1,14 @@
+@import '../config/config';
+
+.home-page {
+  .header__background {
+    height: $home__header-height;
+    .header__content {
+      .header__logo {
+        img {
+          height: $home__header-height;
+        }
+      }
+    }
+  }
+}
