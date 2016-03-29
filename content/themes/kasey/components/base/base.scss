@@ -9,8 +9,31 @@ html body {
   strong, b {
     font-weight: bold;
   }
+
   i, em {
     font-style: italic;
+  }
+
+  mark {
+    background-color: $base-highlight-color;
+  }
+
+  ol, ul {
+    margin: 2rem 0;
+    padding-left: 1rem;
+    ol, ul {
+      margin: 1rem 0 0;
+      padding-left: 2rem;
+    }
+  }
+  ul {
+    list-style-type: circle;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  li:not(:last-child) {
+    padding-bottom: 1rem;
   }
 
   a {

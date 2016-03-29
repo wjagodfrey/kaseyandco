@@ -14,6 +14,20 @@ html body {
     font-weight: bold; }
   html body i, html body em {
     font-style: italic; }
+  html body mark {
+    background-color: #FFF785; }
+  html body ol, html body ul {
+    margin: 2rem 0;
+    padding-left: 1rem; }
+    html body ol ol, html body ol ul, html body ul ol, html body ul ul {
+      margin: 1rem 0 0;
+      padding-left: 2rem; }
+  html body ul {
+    list-style-type: circle; }
+  html body ol {
+    list-style-type: decimal; }
+  html body li:not(:last-child) {
+    padding-bottom: 1rem; }
   html body a {
     color: #4a4e69; }
     html body a:visited {

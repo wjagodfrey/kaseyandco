@@ -8,6 +8,7 @@ $storm: #4a4e69;
 $grave: #948b99;
 $salmon: #edbbba;
 $beige: #f2e9e4;
+$sunlight: #FFF785;
 
 // BREAKPOINTS
 $breakpoint-lg: 1080px;
@@ -23,6 +24,7 @@ $grey-lighter: lighten($grey, 35%);
 
 // COMPONENTS
 $base-text-color: $storm;
+$base-highlight-color: $sunlight;
 
 $home__header-height: 75vh;
 $page__header-height: 50vh;
