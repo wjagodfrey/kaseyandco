@@ -10,24 +10,6 @@ html body {
   font-family: Heiti SC;
   color: #4a4e69;
   background-color: #ffffff; }
-  html body strong, html body b {
-    font-weight: bold; }
-  html body i, html body em {
-    font-style: italic; }
-  html body mark {
-    background-color: #FFF785; }
-  html body ol, html body ul {
-    margin: 2rem 0;
-    padding-left: 1rem; }
-    html body ol ol, html body ol ul, html body ul ol, html body ul ul {
-      margin: 1rem 0 0;
-      padding-left: 2rem; }
-  html body ul {
-    list-style-type: circle; }
-  html body ol {
-    list-style-type: decimal; }
-  html body li:not(:last-child) {
-    padding-bottom: 1rem; }
   html body a {
     color: #4a4e69; }
     html body a:visited {
@@ -109,6 +91,24 @@ html {
         margin-top: 0; }
       .blog-list .blog-list__post .blog-list__excerpt p:last-child {
         margin-bottom: 0; }
+    .blog-list .blog-list__post .blog-list__excerpt strong, .blog-list .blog-list__post .blog-list__excerpt b {
+      font-weight: bold; }
+    .blog-list .blog-list__post .blog-list__excerpt i, .blog-list .blog-list__post .blog-list__excerpt em {
+      font-style: italic; }
+    .blog-list .blog-list__post .blog-list__excerpt mark {
+      background-color: #FFF785; }
+    .blog-list .blog-list__post .blog-list__excerpt ol, .blog-list .blog-list__post .blog-list__excerpt ul {
+      margin: 2rem 0;
+      padding-left: 1rem; }
+      .blog-list .blog-list__post .blog-list__excerpt ol ol, .blog-list .blog-list__post .blog-list__excerpt ol ul, .blog-list .blog-list__post .blog-list__excerpt ul ol, .blog-list .blog-list__post .blog-list__excerpt ul ul {
+        margin: 1rem 0 0;
+        padding-left: 2rem; }
+    .blog-list .blog-list__post .blog-list__excerpt ul {
+      list-style-type: circle; }
+    .blog-list .blog-list__post .blog-list__excerpt ol {
+      list-style-type: decimal; }
+    .blog-list .blog-list__post .blog-list__excerpt li:not(:last-child) {
+      padding-bottom: 1rem; }
     .blog-list .blog-list__post .blog-list__excerpt h1, .blog-list .blog-list__post .blog-list__excerpt h2, .blog-list .blog-list__post .blog-list__excerpt h3, .blog-list .blog-list__post .blog-list__excerpt h4, .blog-list .blog-list__post .blog-list__excerpt h5, .blog-list .blog-list__post .blog-list__excerpt h6 {
       font-size: 0.6em; }
   .blog-list .blog-list__post .blog-list__read-more {
@@ -442,6 +442,24 @@ html {
       margin-top: 0; }
     .post .post__wrapper .post__content p:last-child {
       margin-bottom: 0; }
+  .post .post__wrapper .post__content strong, .post .post__wrapper .post__content b {
+    font-weight: bold; }
+  .post .post__wrapper .post__content i, .post .post__wrapper .post__content em {
+    font-style: italic; }
+  .post .post__wrapper .post__content mark {
+    background-color: #FFF785; }
+  .post .post__wrapper .post__content ol, .post .post__wrapper .post__content ul {
+    margin: 2rem 0;
+    padding-left: 1rem; }
+    .post .post__wrapper .post__content ol ol, .post .post__wrapper .post__content ol ul, .post .post__wrapper .post__content ul ol, .post .post__wrapper .post__content ul ul {
+      margin: 1rem 0 0;
+      padding-left: 2rem; }
+  .post .post__wrapper .post__content ul {
+    list-style-type: circle; }
+  .post .post__wrapper .post__content ol {
+    list-style-type: decimal; }
+  .post .post__wrapper .post__content li:not(:last-child) {
+    padding-bottom: 1rem; }
 
 .post .post__read-other .post__read-other-post {
   padding: 2rem 0 1rem; }
