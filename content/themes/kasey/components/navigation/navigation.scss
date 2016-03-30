@@ -12,11 +12,16 @@
   .navigation__logo {
     background-image: url(/assets/images/nav_logo.png);
     background-size: contain;
-    display: block;
+    display: inline-block;
     margin-top: $navigation-height * 0.1;
     margin-left: 0.3rem;
-    width: $navigation-height * 0.6;
-    height: $navigation-height * 0.8;
+    width: $navigation-logo-width;
+    height: $navigation-logo-height;
+    left: 50%;
+    margin-left: -($navigation-logo-width/2);
+
+    position: absolute;
+    z-index: 1;
   }
 
   ul.navigation__list {
@@ -27,9 +32,20 @@
     margin-top: -($navigation-height / 8);
     padding: 0;
 
+    // to center around the logo
+    padding-left: 2.66rem;
+
     li.navigation__list-item {
       display: inline-block;
       padding: 0 1rem;
+
+      &:nth-child(2) {
+        padding-right: 4rem;
+      }
+      &:nth-child(3) {
+        padding-left: 4rem;
+      }
+
       a.navigation__list-item-link {
         text-decoration: none;
         color: $base-text-color;
