@@ -6,6 +6,7 @@
   z-index: 1000;
   width: 100%;
   height: $navigation-height;
+  line-height: $navigation-height;
   background: $white;
   text-align: center;
 
@@ -25,11 +26,9 @@
   }
 
   ul.navigation__list {
-    position: absolute;
-    top: 50%;
+    vertical-align: middle;
     width: 100%;
     height: $navigation-height / 2;
-    margin-top: -($navigation-height / 8);
     padding: 0;
 
     // to center around the logo
