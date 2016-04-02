@@ -308,28 +308,51 @@ html {
   height: 70px;
   line-height: 70px;
   background: #ffffff;
-  text-align: center; }
+  text-align: center;
+  font-size: 1rem;
+  -webkit-transition: height line-height font-size;
+  -moz-transition: height line-height font-size;
+  transition: height line-height font-size;
+  -webkit-transition-duration: 0.1s;
+  -moz-transition-duration: 0.1s;
+  transition-duration: 0.1s; }
   .navigation .navigation__logo {
     background-image: url(/assets/images/nav_logo.png);
     background-size: contain;
     display: inline-block;
-    margin-top: 7px;
-    margin-left: 0.3rem;
     width: 42px;
     height: 56px;
-    left: 50%;
+    margin-top: 7px;
     margin-left: -21px;
+    left: 50%;
+    -webkit-transition: width height margin-top margin-left;
+    -moz-transition: width height margin-top margin-left;
+    transition: width height margin-top margin-left;
+    -webkit-transition-duration: 0.1s;
+    -moz-transition-duration: 0.1s;
+    transition-duration: 0.1s;
     position: absolute;
     z-index: 1; }
   .navigation ul.navigation__list {
     vertical-align: middle;
     width: 100%;
-    height: 35px;
     padding: 0;
-    padding-left: 2.66rem; }
+    padding-left: 2.66rem;
+    -webkit-transition: padding;
+    -moz-transition: padding;
+    transition: padding;
+    -webkit-transition-duration: 0.1s;
+    -moz-transition-duration: 0.1s;
+    transition-duration: 0.1s; }
     .navigation ul.navigation__list li.navigation__list-item {
       display: inline-block;
-      padding: 0 1rem; }
+      padding: 0 1rem;
+      -webkit-transition: padding;
+      -moz-transition: padding;
+      transition: padding;
+      -webkit-transition-duration: 0.1s;
+      -moz-transition-duration: 0.1s;
+      transition-duration: 0.1s; }
       .navigation ul.navigation__list li.navigation__list-item:nth-child(2) {
         padding-right: 4rem; }
       .navigation ul.navigation__list li.navigation__list-item:nth-child(3) {
@@ -338,6 +361,24 @@ html {
         text-decoration: none;
         color: #4a4e69;
         font-weight: 700; }
+  body.scrolled .navigation {
+    font-size: 0.75rem;
+    height: 40px;
+    line-height: 40px; }
+    body.scrolled .navigation .navigation__logo {
+      width: 24px;
+      height: 32px;
+      margin-top: 4px;
+      margin-left: -12px; }
+    body.scrolled .navigation ul.navigation__list {
+      padding-left: 2.2rem; }
+      body.scrolled .navigation ul.navigation__list li.navigation__list-item {
+        display: inline-block;
+        padding: 0 1rem; }
+        body.scrolled .navigation ul.navigation__list li.navigation__list-item:nth-child(2) {
+          padding-right: 2.5rem; }
+        body.scrolled .navigation ul.navigation__list li.navigation__list-item:nth-child(3) {
+          padding-left: 2.5rem; }
 html {
   box-sizing: border-box; }
 

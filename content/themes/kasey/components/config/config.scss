@@ -31,8 +31,12 @@ $page__header-height: 50vh;
 
 $post__header--min-height: 20rem;
 
+$navigation-shrink-duration: 0.1s;
 $navigation-height: 70px;
 $navigation-logo-width: $navigation-height * 0.6;
 $navigation-logo-height: $navigation-height * 0.8;
+$navigation-height--shrunk: 40px;
+$navigation-logo-width--shrunk: $navigation-height--shrunk * 0.6;
+$navigation-logo-height--shrunk: $navigation-height--shrunk * 0.8;
 
 $footer-height: 65px;

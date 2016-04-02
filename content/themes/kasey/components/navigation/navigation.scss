@@ -9,17 +9,21 @@
   line-height: $navigation-height;
   background: $white;
   text-align: center;
+  font-size: 1rem;
+  @include transition(height line-height font-size);
+  @include transition-duration($navigation-shrink-duration);
 
   .navigation__logo {
     background-image: url(/assets/images/nav_logo.png);
     background-size: contain;
     display: inline-block;
-    margin-top: $navigation-height * 0.1;
-    margin-left: 0.3rem;
     width: $navigation-logo-width;
     height: $navigation-logo-height;
-    left: 50%;
+    margin-top: $navigation-height * 0.1;
     margin-left: -($navigation-logo-width/2);
+    left: 50%;
+    @include transition(width height margin-top margin-left);
+    @include transition-duration($navigation-shrink-duration);
 
     position: absolute;
     z-index: 1;
@@ -28,15 +32,18 @@
   ul.navigation__list {
     vertical-align: middle;
     width: 100%;
-    height: $navigation-height / 2;
     padding: 0;
 
     // to center around the logo
     padding-left: 2.66rem;
+    @include transition(padding);
+    @include transition-duration($navigation-shrink-duration);
 
     li.navigation__list-item {
       display: inline-block;
       padding: 0 1rem;
+      @include transition(padding);
+      @include transition-duration($navigation-shrink-duration);
 
       &:nth-child(2) {
         padding-right: 4rem;
@@ -49,6 +56,33 @@
         text-decoration: none;
         color: $base-text-color;
         font-weight: 700;
+      }
+    }
+  }
+
+  // shrunk nav when scrolled
+  body.scrolled & {
+    font-size: 0.75rem;
+    height: $navigation-height--shrunk;
+    line-height: $navigation-height--shrunk;
+    .navigation__logo {
+      width: $navigation-logo-width--shrunk;
+      height: $navigation-logo-height--shrunk;
+      margin-top: $navigation-height--shrunk * 0.1;
+      margin-left: -($navigation-logo-width--shrunk/2);
+    }
+    ul.navigation__list {
+      padding-left: 2.2rem;
+      li.navigation__list-item {
+        display: inline-block;
+        padding: 0 1rem;
+
+        &:nth-child(2) {
+          padding-right: 2.5rem;
+        }
+        &:nth-child(3) {
+          padding-left: 2.5rem;
+        }
       }
     }
   }
