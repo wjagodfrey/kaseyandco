@@ -1,20 +1,21 @@
-<div class="navigation navigation--shrunk">
-<div class="navigation__wrapper">
-  <a href="/" class="navigation__logo"></a>
-  <ul class="navigation__list">
-    {{#foreach navigation}}
-      <li
-        class="
+<div class="navigation">
+  {{>navigation-mobile-trigger}}
+  <div class="navigation__wrapper">
+    {{>navigation-mobile-trigger}}
+    <a href="/" class="navigation__logo"></a>
+    <ul class="navigation__list">
+      {{#foreach navigation}}
+        <li
+          class="
           navigation__list-item
           navigation-{{slug}}
           {{#if current}} navigation-current{{/if}}
-        "
-        role="presentation"
-      >
-        <a class="navigation__list-item-link" href="{{url absolute="true"}}">{{label}}</a>
-      </li>
-    {{/foreach}}
-  </ul>
-  <!-- <a class="subscribe-button icon-feed" href="{{@blog.url}}/rss/">Subscribe</a> -->
-</div>
-</div>
+            "
+            role="presentation"
+            >
+            <a class="navigation__list-item-link" href="{{url absolute="true"}}">{{label}}</a>
+          </li>
+        {{/foreach}}
+      </ul>
+    </div>
+  </div>

@@ -6,7 +6,7 @@
 $blue: #0d677b;
 $storm: #4a4e69;
 $grave: #948b99;
-$salmon: #edbbba;
+$orange: #fbb37e;
 $beige: #f2e9e4;
 $sunlight: #FFF785;
 
@@ -23,7 +23,8 @@ $grey-light: lighten($grey, 20%);
 $grey-lighter: lighten($grey, 35%);
 
 // COMPONENTS
-$base-text-color: $storm;
+$base-text-color: $black;
+$base-link-color: $storm;
 $base-highlight-color: $sunlight;
 
 $home__header-height: 75vh;
@@ -31,12 +32,14 @@ $page__header-height: 50vh;
 
 $post__header--min-height: 20rem;
 
-$navigation-shrink-duration: 0.1s;
-$navigation-height: 70px;
-$navigation-logo-width: $navigation-height * 0.6;
-$navigation-logo-height: $navigation-height * 0.8;
-$navigation-height--shrunk: 40px;
-$navigation-logo-width--shrunk: $navigation-height--shrunk * 0.6;
-$navigation-logo-height--shrunk: $navigation-height--shrunk * 0.8;
+$navigation__breakpoint-sm: $breakpoint-sm;
+$navigation__breakpoint-md: $breakpoint-md;
+$navigation__transition-duration: 0.1s;
+$navigation__height--max: 70px;
+$navigation__logo-width--max: $navigation__height--max * 0.6;
+$navigation__logo-height--max: $navigation__height--max * 0.8;
+$navigation__height--min: 40px;
+$navigation__logo-width--min: $navigation__height--min * 0.6;
+$navigation__logo-height--min: $navigation__height--min * 0.8;
 
 $footer-height: 65px;

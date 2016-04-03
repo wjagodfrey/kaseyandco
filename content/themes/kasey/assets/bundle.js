@@ -69,6 +69,7 @@
 		"./header/home-header.scss": 197,
 		"./header/page-header.scss": 199,
 		"./mixins/mixins.scss": 187,
+		"./navigation/navigation.js": 202,
 		"./navigation/navigation.scss": 189,
 		"./page-content/page-content.scss": 191,
 		"./pagination/pagination.scss": 193,
@@ -320,7 +321,7 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license
@@ -21788,6 +21789,45 @@
 	      }
 	    }
 	  };
+	})();
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 202 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+	/*
+	 * Navigation
+	 * ----------
+	 */
+
+	(function () {
+	  var body = global.document.body;
+	  var noScrollClass = ' no-scroll__navigation--mobile-menu ';
+
+	  var wrapperEl = global.document.querySelectorAll('.navigation__wrapper')[0];
+	  var mobileTriggerEls = Array.prototype.slice.call(global.document.querySelectorAll('.navigation__mobile-trigger'));
+	  var mobileMenuShowClass = ' navigation__wrapper--show-mobile ';
+
+	  mobileTriggerEls.forEach(function (mobileTriggerEl) {
+	    mobileTriggerEl.addEventListener('click', function (e) {
+	      // toggle the mobile menu show class and body noscroll
+	      if (!wrapperEl.className.match(mobileMenuShowClass)) {
+	        // add the body noscroll
+	        if (!body.className.match(noScrollClass)) {
+	          body.className += noScrollClass;
+	        }
+	        // add the mobile menu show class
+	        wrapperEl.className += mobileMenuShowClass;
+	      } else {
+	        // remove body noscroll
+	        body.className = body.className.replace(noScrollClass, '');
+	        // remove mobile menu show class
+	        wrapperEl.className = wrapperEl.className.replace(mobileMenuShowClass, '');
+	      }
+	    });
+	  });
 	})();
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 

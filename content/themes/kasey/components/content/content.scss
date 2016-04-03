@@ -5,7 +5,13 @@
   max-width: 100% !important;
 
   // navigation
-  padding-top: $navigation-height;
+  @include media($navigation__breakpoint-md) {
+    padding-top: $navigation__height--min;
+  }
+  @include media($navigation__breakpoint-md) {
+    padding-top: $navigation__height--max;
+  }
+
 
   // sticky footer
   min-height: 100%;

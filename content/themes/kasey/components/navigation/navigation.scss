@@ -1,87 +1,157 @@
 @import '../config/config';
 
+body.no-scroll__navigation--mobile-menu {
+  overflow: hidden;
+}
+
 .navigation {
-  position: fixed;
+
+  // Mobile resolution
+  // -----------------
+  position: absolute;
   top: 0;
   z-index: 1000;
-  width: 100%;
-  height: $navigation-height;
-  line-height: $navigation-height;
-  background: $white;
-  text-align: center;
-  font-size: 1rem;
-  @include transition(height line-height font-size);
-  @include transition-duration($navigation-shrink-duration);
-
-  .navigation__logo {
-    background-image: url(/assets/images/nav_logo.png);
-    background-size: contain;
+  .navigation__mobile-trigger {
     display: inline-block;
-    width: $navigation-logo-width;
-    height: $navigation-logo-height;
-    margin-top: $navigation-height * 0.1;
-    margin-left: -($navigation-logo-width/2);
-    left: 50%;
-    @include transition(width height margin-top margin-left);
-    @include transition-duration($navigation-shrink-duration);
-
-    position: absolute;
-    z-index: 1;
+    color: $white;
+    padding: 0.4rem 0.6rem;
   }
+  .navigation__wrapper {
+    // only include mobile menu styles on mobile
+    @include media(max-width $navigation__breakpoint-sm - 1) {
+      visibility: hidden;
+      opacity: 0;
+      position: fixed;
 
-  ul.navigation__list {
-    vertical-align: middle;
-    width: 100%;
-    padding: 0;
+      // hide off top of screen to allow fade transitioning
+      bottom: 150vh;
+      @include transition(visibility 0s, opacity $navigation__transition-duration linear)
 
-    // to center around the logo
-    padding-left: 2.66rem;
-    @include transition(padding);
-    @include transition-duration($navigation-shrink-duration);
+      &.navigation__wrapper--show-mobile {
+        visibility: visible;
+        opacity: 1;
 
-    li.navigation__list-item {
-      display: inline-block;
-      padding: 0 1rem;
-      @include transition(padding);
-      @include transition-duration($navigation-shrink-duration);
-
-      &:nth-child(2) {
-        padding-right: 4rem;
-      }
-      &:nth-child(3) {
-        padding-left: 4rem;
-      }
-
-      a.navigation__list-item-link {
-        text-decoration: none;
-        color: $base-text-color;
-        font-weight: 700;
-      }
-    }
-  }
-
-  // shrunk nav when scrolled
-  body.scrolled & {
-    font-size: 0.75rem;
-    height: $navigation-height--shrunk;
-    line-height: $navigation-height--shrunk;
-    .navigation__logo {
-      width: $navigation-logo-width--shrunk;
-      height: $navigation-logo-height--shrunk;
-      margin-top: $navigation-height--shrunk * 0.1;
-      margin-left: -($navigation-logo-width--shrunk/2);
-    }
-    ul.navigation__list {
-      padding-left: 2.2rem;
-      li.navigation__list-item {
-        display: inline-block;
-        padding: 0 1rem;
-
-        &:nth-child(2) {
-          padding-right: 2.5rem;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background: $white;
+        .navigation__mobile-trigger {
+          color: $black;
         }
-        &:nth-child(3) {
-          padding-left: 2.5rem;
+        .navigation__list {
+          margin-top: 2rem;
+          font-size: 2rem;
+          text-align: center;
+          .navigation__list-item {
+            .navigation__list-item-link {
+              padding-bottom: 0.5rem;
+              display: block;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    .navigation__logo {
+      background-image: url(/assets/images/nav_logo.png);
+      background-size: contain;
+      display: inline-block;
+      width: $navigation__logo-width--min;
+      height: $navigation__logo-height--min;
+      margin-top: $navigation__height--min * 0.1;
+      margin-left: -($navigation__logo-width--min/2);
+      left: 50%;
+      @include transition(width height margin-top margin-left);
+      @include transition-duration($navigation__transition-duration);
+
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  // adjust title if there is no image
+  body.no-cover & {
+    .navigation__mobile-trigger {
+      color: $base-text-color;
+    }
+  }
+
+
+  // Desktop + Tablet resolution
+  // ---------------------------
+  @include media($navigation__breakpoint-sm) {
+    position: fixed;
+    width: 100%;
+    height: $navigation__height--min;
+    line-height: $navigation__height--min;
+    background: $white;
+    text-align: center;
+    font-size: 0.75rem;
+    @include transition(height line-height font-size);
+    @include transition-duration($navigation__transition-duration);
+
+    .navigation__mobile-trigger {
+      display: none;
+    }
+    .navigation__wrapper {
+      display: block;
+
+      .navigation__list {
+        vertical-align: middle;
+        width: 100%;
+        padding: 0;
+
+        // to center around the logo
+        padding-left: 2.2rem;
+        @include transition(padding);
+        @include transition-duration($navigation__transition-duration);
+
+        .navigation__list-item {
+          display: inline-block;
+          padding: 0 1rem;
+          @include transition(padding);
+          @include transition-duration($navigation__transition-duration);
+
+          &:nth-child(2) {
+            padding-right: 2.5rem;
+          }
+          &:nth-child(3) {
+            padding-left: 2.5rem;
+          }
+
+          a.navigation__list-item-link {
+            text-decoration: none;
+            color: $base-text-color;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  // Desktop resolution
+  // ------------------
+  // expands nav height at top of page, and shrinks when scrolled
+  @include media($navigation__breakpoint-md) {
+    body:not(.scrolled) & {
+      font-size: 1rem;
+      height: $navigation__height--max;
+      line-height: $navigation__height--max;
+      .navigation__logo {
+        width: $navigation__logo-width--max;
+        height: $navigation__logo-height--max;
+        margin-top: $navigation__height--max * 0.1;
+        margin-left: -($navigation__logo-width--max/2);
+      }
+      ul.navigation__list {
+        padding-left: 2.8rem;
+        li.navigation__list-item {
+          &:nth-child(2) {
+            padding-right: 4rem;
+          }
+          &:nth-child(3) {
+            padding-left: 4rem;
+          }
         }
       }
     }

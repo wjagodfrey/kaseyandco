@@ -30,7 +30,14 @@
             };
         </script>
     </head>
-    <body class="{{body_class}}">
+    <body class="
+      {{body_class}}
+      {{#if post}}
+      {{#unless post.image}}
+        no-cover
+      {{/unless}} 
+      {{/if}}
+    ">
 
         {{navigation}}
 
