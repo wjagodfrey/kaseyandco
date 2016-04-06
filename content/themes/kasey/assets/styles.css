@@ -235,21 +235,10 @@ html {
   position: relative;
   margin-bottom: 3rem; }
   .header .header__background {
-    height: 50vh;
     background-position: center;
     background-size: cover; }
     .header .header__background .header__content {
       text-align: center; }
-      .header .header__background .header__content .header__logo {
-        position: relative;
-        top: 0; }
-        .header .header__background .header__content .header__logo img {
-          -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
-          height: 50vh; }
-      .header .header__background .header__content .header__text {
-        padding-top: 20%;
-        color: #ffffff; }
 html {
   box-sizing: border-box; }
 
@@ -257,10 +246,19 @@ html {
   box-sizing: inherit; }
 
 /* Coolors Exported Palette - coolors.co/0d677b-4a4e69-948b99-edbbba-f2e9e4 */
-.home-page .header__background {
-  height: 75vh; }
-  .home-page .header__background .header__content .header__logo img {
-    height: 75vh; }
+.home-template .header .header__background {
+  height: 75vh;
+  line-height: 75vh; }
+  .home-template .header .header__background .header__content {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    width: 100%; }
+    .home-template .header .header__background .header__content .header__logo img {
+      -webkit-filter: brightness(0) invert(1);
+      filter: brightness(0) invert(1);
+      max-height: 75vh;
+      max-width: 100%; }
 html {
   box-sizing: border-box; }
 
@@ -268,30 +266,11 @@ html {
   box-sizing: inherit; }
 
 /* Coolors Exported Palette - coolors.co/0d677b-4a4e69-948b99-edbbba-f2e9e4 */
-.header {
-  position: relative;
-  margin-bottom: 3rem; }
-  .header .header__background {
-    height: 50vh;
-    background-position: center;
-    background-size: cover; }
-    .header .header__background .header__content {
-      text-align: center; }
-      .header .header__background .header__content .header__logo {
-        position: relative;
-        top: 0; }
-        .header .header__background .header__content .header__logo img {
-          -webkit-filter: brightness(0) invert(1);
-          filter: brightness(0) invert(1);
-          height: 50vh; }
-      .header .header__background .header__content .header__text {
-        padding-top: 20%;
-        color: #ffffff; }
-
-.home-page .header__background {
-  height: 75vh; }
-  .home-page .header__background .header__content .header__logo img {
-    height: 75vh; }
+.page-template .header .header__background {
+  height: 50vh; }
+  .page-template .header .header__background .header__content .header__text {
+    padding-top: 20%;
+    color: #ffffff; }
 html {
   box-sizing: border-box; }
 
