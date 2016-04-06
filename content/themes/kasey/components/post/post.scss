@@ -18,6 +18,9 @@
       background-size: cover;
       overflow:hidden;
       min-height: $post__header--min-height;
+
+      @include navigation-responsive-height(padding-top);
+
       .post__header-content {
         @include main-content-grid;
         padding: 2rem 0;

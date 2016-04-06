@@ -1,3 +1,5 @@
+@import '../mixins/navigation';
+
 @mixin post-formatting() {
   @include hyphens(auto);
   img {

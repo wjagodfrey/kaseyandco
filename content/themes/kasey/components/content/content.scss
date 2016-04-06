@@ -4,14 +4,6 @@
   @include outer-container;
   max-width: 100% !important;
 
-  // navigation
-  @include media($navigation__breakpoint-md) {
-    padding-top: $navigation__height--min;
-  }
-  @include media($navigation__breakpoint-md) {
-    padding-top: $navigation__height--max;
-  }
-
 
   // sticky footer
   min-height: 100%;

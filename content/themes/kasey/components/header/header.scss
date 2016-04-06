@@ -3,10 +3,13 @@
 .header {
   position: relative;
   margin-bottom: 3rem;
+
   .header__background {
     height: $page__header-height;
     background-position: center;
     background-size: cover;
+    @include navigation-responsive-height(padding-top);
+
     .header__content {
       text-align: center;
       .header__logo {

@@ -66,15 +66,16 @@
 		"./css-reset/css-reset.scss": 181,
 		"./footer/footer.scss": 183,
 		"./header/header.scss": 185,
-		"./header/home-header.scss": 197,
-		"./header/page-header.scss": 199,
-		"./mixins/mixins.scss": 187,
-		"./navigation/navigation.js": 202,
-		"./navigation/navigation.scss": 189,
-		"./page-content/page-content.scss": 191,
-		"./pagination/pagination.scss": 193,
-		"./post/post.scss": 195,
-		"./scroll-watch/scroll-watch.js": 201
+		"./header/home-header.scss": 187,
+		"./header/page-header.scss": 189,
+		"./mixins/mixins.scss": 191,
+		"./mixins/navigation.scss": 193,
+		"./navigation/navigation.js": 195,
+		"./navigation/navigation.scss": 196,
+		"./page-content/page-content.scss": 198,
+		"./pagination/pagination.scss": 200,
+		"./post/post.scss": 202,
+		"./scroll-watch/scroll-watch.js": 204
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -321,7 +322,7 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license
@@ -21746,56 +21747,6 @@
 /* 195 */
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 196 */,
-/* 197 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 198 */,
-/* 199 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 200 */,
-/* 201 */
-/***/ function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
-	/*
-	 * Scroll Watch
-	 * ------------
-	 * Watch window scroll, and add class to body when 10 pixels from the top
-	 */
-
-	(function () {
-	  global.onscroll = function (e) {
-	    var body = global.document.body;
-	    var scrollY = global.scrollY;
-	    var scrollLimit = 40;
-	    var className = ' scrolled ';
-
-	    if (scrollY <= scrollLimit) {
-	      body.className = body.className.replace(className, '');
-	    } else if (scrollY > scrollLimit) {
-	      if (!body.className.match(className)) {
-	        body.className += className;
-	      }
-	    }
-	  };
-	})();
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 202 */
-/***/ function(module, exports) {
-
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
 	/*
 	 * Navigation
@@ -21828,6 +21779,63 @@
 	      }
 	    });
 	  });
+	})();
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 196 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 197 */,
+/* 198 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 199 */,
+/* 200 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 201 */,
+/* 202 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 203 */,
+/* 204 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+	/*
+	 * Scroll Watch
+	 * ------------
+	 * Watch window scroll, and add class to body when 10 pixels from the top
+	 */
+
+	(function () {
+	  global.onscroll = function (e) {
+	    var body = global.document.body;
+	    var scrollY = global.scrollY;
+	    var scrollLimit = 40;
+	    var className = ' scrolled ';
+
+	    if (scrollY <= scrollLimit) {
+	      body.className = body.className.replace(className, '');
+	    } else if (scrollY > scrollLimit) {
+	      if (!body.className.match(className)) {
+	        body.className += className;
+	      }
+	    }
+	  };
 	})();
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 

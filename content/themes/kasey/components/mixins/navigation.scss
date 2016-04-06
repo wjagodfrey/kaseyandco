@@ -1,0 +1,28 @@
+// navigation mixins
+
+@mixin navigation-responsive-height($prop) {
+  // navigation
+  @include media($navigation__breakpoint-sm) {
+    $prop: $navigation__height--min;
+  }
+  @include media($navigation__breakpoint-md) {
+    $prop: $navigation__height--max;
+  }
+}
+
+@mixin navigation-colors-white($boolean) {
+  &, .navigation__list-item-link, a {
+    @if $boolean == true {
+      color: $white;
+    } @else {
+      color: $black;
+    }
+  }
+  .navigation__logo {
+    @if $boolean == true {
+      @include filter(brightness(0) invert(1));
+    } @else {
+      @include filter(brightness(0) invert(0));
+    }
+  }
+}
