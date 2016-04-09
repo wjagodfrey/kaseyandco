@@ -64,20 +64,20 @@
 		"./config/config.scss": 177,
 		"./content/content.scss": 179,
 		"./css-reset/css-reset.scss": 181,
-		"./footer-images/footer-images.js": 205,
-		"./footer-images/footer-images.scss": 206,
-		"./footer/footer.scss": 183,
-		"./header/header.scss": 185,
-		"./header/home-header.scss": 187,
-		"./header/page-header.scss": 189,
-		"./mixins/mixins.scss": 191,
-		"./mixins/navigation.scss": 193,
-		"./navigation/navigation.js": 195,
-		"./navigation/navigation.scss": 196,
-		"./page-content/page-content.scss": 198,
-		"./pagination/pagination.scss": 200,
-		"./post/post.scss": 202,
-		"./scroll-watch/scroll-watch.js": 204
+		"./footer-images/footer-images.js": 183,
+		"./footer-images/footer-images.scss": 184,
+		"./footer/footer.scss": 186,
+		"./header/header.scss": 188,
+		"./header/home-header.scss": 190,
+		"./header/page-header.scss": 192,
+		"./mixins/mixins.scss": 194,
+		"./mixins/navigation.scss": 196,
+		"./navigation/navigation.js": 198,
+		"./navigation/navigation.scss": 199,
+		"./page-content/page-content.scss": 201,
+		"./pagination/pagination.scss": 203,
+		"./post/post.scss": 205,
+		"./scroll-watch/scroll-watch.js": 207
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -324,7 +324,7 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license
@@ -21705,144 +21705,6 @@
 /***/ },
 /* 182 */,
 /* 183 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 184 */,
-/* 185 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 186 */,
-/* 187 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 188 */,
-/* 189 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 190 */,
-/* 191 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 192 */,
-/* 193 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 194 */,
-/* 195 */
-/***/ function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
-	/*
-	 * Navigation
-	 * ----------
-	 */
-
-	(function () {
-	  var body = global.document.body;
-	  var noScrollClass = ' no-scroll__navigation--mobile-menu ';
-
-	  var wrapperEl = global.document.querySelectorAll('.navigation__wrapper')[0];
-	  var mobileTriggerEls = Array.prototype.slice.call(global.document.querySelectorAll('.navigation__mobile-trigger'));
-	  var mobileMenuShowClass = ' navigation__wrapper--show-mobile ';
-
-	  mobileTriggerEls.forEach(function (mobileTriggerEl) {
-	    mobileTriggerEl.addEventListener('click', function (e) {
-	      // toggle the mobile menu show class and body noscroll
-	      if (!wrapperEl.className.match(mobileMenuShowClass)) {
-	        // add the body noscroll
-	        if (!body.className.match(noScrollClass)) {
-	          body.className += noScrollClass;
-	        }
-	        // add the mobile menu show class
-	        wrapperEl.className += mobileMenuShowClass;
-	      } else {
-	        // remove body noscroll
-	        body.className = body.className.replace(noScrollClass, '');
-	        // remove mobile menu show class
-	        wrapperEl.className = wrapperEl.className.replace(mobileMenuShowClass, '');
-	      }
-	    });
-	  });
-	})();
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 196 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 197 */,
-/* 198 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 199 */,
-/* 200 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 201 */,
-/* 202 */
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-/* 203 */,
-/* 204 */
-/***/ function(module, exports) {
-
-	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
-	/*
-	 * Scroll Watch
-	 * ------------
-	 * Watch window scroll, and add class to body when 10 pixels from the top
-	 */
-
-	(function () {
-	  global.onscroll = function (e) {
-	    var body = global.document.body;
-	    var scrollY = global.scrollY;
-	    var scrollLimit = 40;
-	    var className = ' scrolled ';
-
-	    if (scrollY <= scrollLimit) {
-	      body.className = body.className.replace(className, '');
-	    } else if (scrollY > scrollLimit) {
-	      if (!body.className.match(className)) {
-	        body.className += className;
-	      }
-	    }
-	  };
-	})();
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
-
-/***/ },
-/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
@@ -21890,10 +21752,149 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 206 */
+/* 184 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 185 */,
+/* 186 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 187 */,
+/* 188 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 189 */,
+/* 190 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 191 */,
+/* 192 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 193 */,
+/* 194 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 195 */,
+/* 196 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 197 */,
+/* 198 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+	/*
+	 * Navigation
+	 * ----------
+	 */
+
+	(function () {
+	  var body = global.document.body;
+	  var noScrollClass = ' no-scroll__navigation--mobile-menu ';
+
+	  var wrapperEl = global.document.querySelectorAll('.navigation__wrapper')[0];
+	  var mobileTriggerEls = Array.prototype.slice.call(global.document.querySelectorAll('.navigation__mobile-trigger'));
+	  var mobileMenuShowClass = ' navigation__wrapper--show-mobile ';
+
+	  mobileTriggerEls.forEach(function (mobileTriggerEl) {
+	    mobileTriggerEl.addEventListener('click', function (e) {
+	      // toggle the mobile menu show class and body noscroll
+	      if (!wrapperEl.className.match(mobileMenuShowClass)) {
+	        // add the body noscroll
+	        if (!body.className.match(noScrollClass)) {
+	          body.className += noScrollClass;
+	        }
+	        // add the mobile menu show class
+	        wrapperEl.className += mobileMenuShowClass;
+	      } else {
+	        // remove body noscroll
+	        body.className = body.className.replace(noScrollClass, '');
+	        // remove mobile menu show class
+	        wrapperEl.className = wrapperEl.className.replace(mobileMenuShowClass, '');
+	      }
+	    });
+	  });
+	})();
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 199 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 200 */,
+/* 201 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 202 */,
+/* 203 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 204 */,
+/* 205 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
+/* 206 */,
+/* 207 */
+/***/ function(module, exports) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+	/*
+	 * Scroll Watch
+	 * ------------
+	 * Watch window scroll, and add class to body when 10 pixels from the top
+	 */
+
+	(function () {
+	  global.onscroll = function (e) {
+	    var body = global.document.body;
+	    var scrollY = global.scrollY;
+	    var scrollLimit = 40;
+	    var className = ' scrolled ';
+
+	    if (scrollY <= scrollLimit) {
+	      body.className = body.className.replace(className, '');
+	    } else if (scrollY > scrollLimit) {
+	      if (!body.className.match(className)) {
+	        body.className += className;
+	      }
+	    }
+	  };
+	})();
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ }
 /******/ ]);

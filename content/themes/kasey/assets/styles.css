@@ -237,12 +237,14 @@ html {
   text-align: center;
   height: 65px;
   line-height: 65px;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   font-weight: bold; }
   .footer .footer__content {
     display: inline-block;
     vertical-align: middle;
     line-height: normal; }
+  .footer .footer__section {
+    margin: 0.35rem 0; }
 html {
   box-sizing: border-box; }
 
