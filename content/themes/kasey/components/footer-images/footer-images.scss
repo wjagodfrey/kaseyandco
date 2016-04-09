@@ -1,0 +1,17 @@
+@import '../config/config';
+
+.footer-images {
+  padding-top: 2rem;
+  text-align: center;
+  .footer-images__image-link {
+    display: inline-block;
+    width: 50vw;
+    height: 50vw;
+    background-size: cover;
+
+    @include media($breakpoint-sm) {
+      width: 25vw;
+      height: 25vw;
+    }
+  }
+}

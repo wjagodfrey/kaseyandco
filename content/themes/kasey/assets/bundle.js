@@ -64,6 +64,8 @@
 		"./config/config.scss": 177,
 		"./content/content.scss": 179,
 		"./css-reset/css-reset.scss": 181,
+		"./footer-images/footer-images.js": 205,
+		"./footer-images/footer-images.scss": 206,
 		"./footer/footer.scss": 183,
 		"./header/header.scss": 185,
 		"./header/home-header.scss": 187,
@@ -21838,6 +21840,60 @@
 	  };
 	})();
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 205 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(global) {'use strict';
+
+	var React = __webpack_require__(14);
+	var ReactDOM = __webpack_require__(170);
+	var config = __webpack_require__(174);
+
+	var containerId = 'js-component__footer-images';
+	var containerEl = document.getElementById(containerId);
+
+	console.log(containerEl);
+
+	var images = global.footerImages;
+
+	if (containerEl && footerImages instanceof Array) {
+	  var Images = React.createClass({
+	    displayName: 'Images',
+
+	    // get initial state object
+	    getInitialState: function getInitialState() {
+	      return {
+	        images: images
+	      };
+	    },
+
+	    // render the blog list
+	    render: function render() {
+	      console.log(this.state.images);
+	      return React.createElement(
+	        'div',
+	        { className: 'footer-images' },
+	        this.state.images.map(function (image, i) {
+	          var imageStyle = {
+	            backgroundImage: 'url(' + image.imageUrl + ')'
+	          };
+	          return React.createElement('a', { className: 'footer-images__image-link', style: imageStyle, href: image.linkUrl, key: i });
+	        })
+	      );
+	    }
+	  });
+
+	  ReactDOM.render(React.createElement(Images, null), containerEl);
+	}
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 206 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);

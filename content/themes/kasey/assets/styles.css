@@ -214,6 +214,25 @@ html {
   box-sizing: inherit; }
 
 /* Coolors Exported Palette - coolors.co/0d677b-4a4e69-948b99-edbbba-f2e9e4 */
+.footer-images {
+  padding-top: 2rem;
+  text-align: center; }
+  .footer-images .footer-images__image-link {
+    display: inline-block;
+    width: 50vw;
+    height: 50vw;
+    background-size: cover; }
+    @media screen and (min-width: 600px) {
+      .footer-images .footer-images__image-link {
+        width: 25vw;
+        height: 25vw; } }
+html {
+  box-sizing: border-box; }
+
+*, *::after, *::before {
+  box-sizing: inherit; }
+
+/* Coolors Exported Palette - coolors.co/0d677b-4a4e69-948b99-edbbba-f2e9e4 */
 .footer {
   text-align: center;
   height: 65px;
