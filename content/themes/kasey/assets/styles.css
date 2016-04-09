@@ -256,6 +256,12 @@ html {
   .header .header__background {
     background-position: center;
     background-size: cover; }
+    @media screen and (min-width: 600px) {
+      .header .header__background {
+        padding-top: 40px; } }
+    @media screen and (min-width: 800px) {
+      .header .header__background {
+        padding-top: 70px; } }
     .header .header__background .header__content {
       text-align: center; }
 html {
@@ -493,6 +499,12 @@ html {
     background-size: cover;
     overflow: hidden;
     min-height: 20rem; }
+    @media screen and (min-width: 600px) {
+      .post .post__header .post__header-background {
+        padding-top: 40px; } }
+    @media screen and (min-width: 800px) {
+      .post .post__header .post__header-background {
+        padding-top: 70px; } }
     .post .post__header .post__header-background .post__header-content {
       float: left;
       display: block;

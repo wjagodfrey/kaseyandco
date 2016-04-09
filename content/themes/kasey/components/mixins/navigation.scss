@@ -3,10 +3,10 @@
 @mixin navigation-responsive-height($prop) {
   // navigation
   @include media($navigation__breakpoint-sm) {
-    $prop: $navigation__height--min;
+    #{$prop}: $navigation__height--min;
   }
   @include media($navigation__breakpoint-md) {
-    $prop: $navigation__height--max;
+    #{$prop}: $navigation__height--max;
   }
 }
 
