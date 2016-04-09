@@ -10,7 +10,6 @@
     "bourbon-neat": "^1.7.4",
     "chalk": "^1.1.1",
     "css-loader": "^0.23.1",
-    "instafeed": "stevenschobert/instafeed.js",
     "node-sass": "^3.4.2",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.0",
