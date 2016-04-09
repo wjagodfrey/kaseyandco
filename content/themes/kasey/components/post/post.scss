@@ -48,6 +48,21 @@
     .post__footer {
     }
   }
+  .post__share {
+    text-align: center;
+    .post__share-title {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.4rem;
+    }
+    .post__share-link {
+      &:nth-of-type(2n) {
+        margin: 0 4.1rem 0 4rem;
+      }
+      color: $black;
+      text-decoration: none;
+    }
+  }
   .post__read-other {
     .post__read-other-post {
       padding: 2rem 0 1rem;

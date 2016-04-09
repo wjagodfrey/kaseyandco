@@ -10,6 +10,8 @@ html body {
   font-family: Heiti SC;
   color: #000000;
   background-color: #ffffff; }
+  html body .hidden {
+    display: none; }
   html body a {
     color: #4a4e69; }
     html body a:visited {
@@ -579,6 +581,18 @@ html {
     list-style-type: decimal; }
   .post .post__wrapper .post__content li:not(:last-child) {
     padding-bottom: 1rem; }
+
+.post .post__share {
+  text-align: center; }
+  .post .post__share .post__share-title {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem; }
+  .post .post__share .post__share-link {
+    color: #000000;
+    text-decoration: none; }
+    .post .post__share .post__share-link:nth-of-type(2n) {
+      margin: 0 4.1rem 0 4rem; }
 
 .post .post__read-other .post__read-other-post {
   padding: 2rem 0 1rem; }
