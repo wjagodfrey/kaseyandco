@@ -6,8 +6,6 @@ const config = require('../config/config');
 let containerId = 'js-component__footer-images';
 let containerEl = document.getElementById(containerId);
 
-console.log(containerEl);
-
 let images = global.footerImages;
 
 if (containerEl && footerImages instanceof Array) {
@@ -21,7 +19,6 @@ if (containerEl && footerImages instanceof Array) {
 
     // render the blog list
     render: function() {
-      console.log(this.state.images);
       return <div className="footer-images">
         {this.state.images.map(function(image, i) {
           let imageStyle = {

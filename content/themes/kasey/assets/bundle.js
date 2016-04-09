@@ -21716,8 +21716,6 @@
 	var containerId = 'js-component__footer-images';
 	var containerEl = document.getElementById(containerId);
 
-	console.log(containerEl);
-
 	var images = global.footerImages;
 
 	if (containerEl && footerImages instanceof Array) {
@@ -21733,7 +21731,6 @@
 
 	    // render the blog list
 	    render: function render() {
-	      console.log(this.state.images);
 	      return React.createElement(
 	        'div',
 	        { className: 'footer-images' },
