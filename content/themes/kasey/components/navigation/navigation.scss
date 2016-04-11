@@ -64,7 +64,7 @@ body.no-scroll__navigation--mobile-menu {
       display: inline-block;
       width: $navigation__logo-width--min;
       height: $navigation__logo-height--min;
-      margin-top: $navigation__height--min * 0.1;
+      margin-top: 1.3rem;
       margin-left: -($navigation__logo-width--min/2);
       left: 50%;
       @include transition(width height margin-top margin-left);
@@ -96,6 +96,10 @@ body.no-scroll__navigation--mobile-menu {
     }
     .navigation__wrapper {
       display: block;
+
+      .navigation__logo {
+        margin-top: $navigation__height--min * 0.1;
+      }
 
       .navigation__list {
         vertical-align: middle;
