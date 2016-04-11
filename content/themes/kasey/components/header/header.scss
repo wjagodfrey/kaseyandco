@@ -2,7 +2,11 @@
 
 .header {
   position: relative;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
+
+  @include media($breakpoint-sm) {
+    margin-bottom: 3rem;
+  }
   .header__background {
     background-position: center;
     background-size: cover;

@@ -260,7 +260,10 @@ html {
 /* Coolors Exported Palette - coolors.co/0d677b-4a4e69-948b99-edbbba-f2e9e4 */
 .header {
   position: relative;
-  margin-bottom: 3rem; }
+  margin-bottom: 1.5rem; }
+  @media screen and (min-width: 600px) {
+    .header {
+      margin-bottom: 3rem; } }
   .header .header__background {
     background-position: center;
     background-size: cover; }
