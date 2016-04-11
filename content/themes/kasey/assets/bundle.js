@@ -324,7 +324,7 @@
 /* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var __WEBPACK_AMD_DEFINE_RESULT__;var require;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
+	var require;var __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(process, global, module) {/*!
 	 * @overview es6-promise - a tiny implementation of Promises/A+.
 	 * @copyright Copyright (c) 2014 Yehuda Katz, Tom Dale, Stefan Penner and contributors (Conversion to ES6 API by Jake Archibald)
 	 * @license   Licensed under MIT license
@@ -21725,7 +21725,7 @@
 	    // get initial state object
 	    getInitialState: function getInitialState() {
 	      return {
-	        images: images
+	        images: images.slice(0, 6)
 	      };
 	    },
 
@@ -21735,10 +21735,11 @@
 	        'div',
 	        { className: 'footer-images' },
 	        this.state.images.map(function (image, i) {
+	          var mobileHideClass = i >= 3 ? 'footer-images__image-link--mobile-hide' : '';
 	          var imageStyle = {
 	            backgroundImage: 'url(' + image.imageUrl + ')'
 	          };
-	          return React.createElement('a', { className: 'footer-images__image-link', style: imageStyle, href: image.linkUrl, key: i });
+	          return React.createElement('a', { className: 'footer-images__image-link ' + mobileHideClass, style: imageStyle, href: image.linkUrl, key: i });
 	        })
 	      );
 	    }

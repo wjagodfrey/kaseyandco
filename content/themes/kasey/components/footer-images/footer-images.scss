@@ -5,13 +5,20 @@
   text-align: center;
   .footer-images__image-link {
     display: inline-block;
-    width: 50vw;
-    height: 50vw;
+    width: 33.33vw;
+    height: 33.33vw;
     background-size: cover;
 
+    &.footer-images__image-link--mobile-hide {
+      display:none;
+    }
+
     @include media($breakpoint-sm) {
-      width: 25vw;
-      height: 25vw;
+      width: 16.66vw;
+      height: 16.66vw;
+      &.footer-images__image-link--mobile-hide {
+        display:inline-block;
+      }
     }
   }
 }

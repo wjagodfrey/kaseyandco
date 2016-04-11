@@ -221,13 +221,17 @@ html {
   text-align: center; }
   .footer-images .footer-images__image-link {
     display: inline-block;
-    width: 50vw;
-    height: 50vw;
+    width: 33.33vw;
+    height: 33.33vw;
     background-size: cover; }
+    .footer-images .footer-images__image-link.footer-images__image-link--mobile-hide {
+      display: none; }
     @media screen and (min-width: 600px) {
       .footer-images .footer-images__image-link {
-        width: 25vw;
-        height: 25vw; } }
+        width: 16.66vw;
+        height: 16.66vw; }
+        .footer-images .footer-images__image-link.footer-images__image-link--mobile-hide {
+          display: inline-block; } }
 html {
   box-sizing: border-box; }
 

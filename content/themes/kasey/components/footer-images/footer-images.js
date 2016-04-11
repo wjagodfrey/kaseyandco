@@ -13,7 +13,7 @@ if (containerEl && footerImages instanceof Array) {
     // get initial state object
     getInitialState: function() {
       return {
-        images
+        images: images.slice(0,6)
       };
     },
 
@@ -21,11 +21,11 @@ if (containerEl && footerImages instanceof Array) {
     render: function() {
       return <div className="footer-images">
         {this.state.images.map(function(image, i) {
+          let mobileHideClass = (i >= 3) ? 'footer-images__image-link--mobile-hide' : '';
           let imageStyle = {
             backgroundImage: `url(${image.imageUrl})`
           }
-          return <a className="footer-images__image-link" style={imageStyle} href={image.linkUrl} key={i}>
-          </a>
+          return <a className={'footer-images__image-link ' + mobileHideClass} style={imageStyle} href={image.linkUrl} key={i}></a>
         })}
       </div>
     },
