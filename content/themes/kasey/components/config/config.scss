@@ -28,7 +28,7 @@ $base-link-color: $storm;
 $base-highlight-color: $sunlight;
 
 $home__header-height: 75vh;
-$page__header-height: 50vh;
+$page__header-height: 75vh;
 
 $post__header--min-height: 20rem;
 
@@ -36,10 +36,10 @@ $navigation__breakpoint-sm: $breakpoint-sm;
 $navigation__breakpoint-md: $breakpoint-md;
 $navigation__transition-duration: 0.1s;
 $navigation__height--max: 70px;
-$navigation__logo-width--max: $navigation__height--max * 0.6;
+$navigation__logo-width--max: $navigation__height--max * 2.05;
 $navigation__logo-height--max: $navigation__height--max * 0.8;
 $navigation__height--min: 40px;
-$navigation__logo-width--min: $navigation__height--min * 0.6;
+$navigation__logo-width--min: $navigation__height--min * 2.05;
 $navigation__logo-height--min: $navigation__height--min * 0.8;
 
 $footer-height: 65px;

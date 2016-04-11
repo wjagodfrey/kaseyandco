@@ -59,7 +59,7 @@ body.no-scroll__navigation--mobile-menu {
     }
 
     .navigation__logo {
-      background-image: url(/assets/images/nav_logo.png);
+      background-image: url(/assets/images/logo__nav.png);
       background-size: contain;
       display: inline-block;
       width: $navigation__logo-width--min;
@@ -114,10 +114,10 @@ body.no-scroll__navigation--mobile-menu {
           @include transition-duration($navigation__transition-duration);
 
           &:nth-child(2) {
-            padding-right: 2.5rem;
+            padding-right: 3.5rem;
           }
           &:nth-child(3) {
-            padding-left: 2.5rem;
+            padding-left: 3.5rem;
           }
 
           a.navigation__list-item-link {
@@ -147,10 +147,10 @@ body.no-scroll__navigation--mobile-menu {
         padding-left: 2.8rem;
         li.navigation__list-item {
           &:nth-child(2) {
-            padding-right: 4rem;
+            padding-right: 5.3rem;
           }
           &:nth-child(3) {
-            padding-left: 4rem;
+            padding-left: 5.3rem;
           }
         }
       }

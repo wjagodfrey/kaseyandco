@@ -3,11 +3,39 @@
 .page-template .header {
   .header__background {
     height: $page__header-height;
-    .header__content {
-      .header__text {
-        padding-top: 20%;
-        color: $white;
+    .header__title {
+      height: 100%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      @include filter(brightness(0) invert(1));
+      body.no-cover & {
+        @include filter(brightness(0) invert(0));
       }
     }
+  }
+}
+
+.page-blog {
+  .header__title {
+    background-image: url(/assets/images/header__blog.png);
+  }
+}
+
+.page-about {
+  .header__title {
+    background-image: url(/assets/images/header__about.png);
+  }
+}
+
+.page-podcast {
+  .header__title {
+    background-image: url(/assets/images/header__podcast.png);
+  }
+}
+
+.page-contact {
+  .header__title {
+    background-image: url(/assets/images/header__contact.png);
   }
 }
