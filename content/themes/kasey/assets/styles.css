@@ -300,10 +300,13 @@ html {
 
 /* Coolors Exported Palette - coolors.co/0d677b-4a4e69-948b99-edbbba-f2e9e4 */
 .page-template .header .header__background {
-  height: 75vh; }
+  height: 35vh; }
+  @media screen and (min-width: 600px) {
+    .page-template .header .header__background {
+      height: 75vh; } }
   .page-template .header .header__background .header__title {
     height: 100%;
-    background-size: contain;
+    background-size: 60%;
     background-position: center;
     background-repeat: no-repeat;
     -webkit-filter: brightness(0) invert(1);

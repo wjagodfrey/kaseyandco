@@ -2,10 +2,13 @@
 
 .page-template .header {
   .header__background {
-    height: $page__header-height;
+    height: $page__header-height - 40vh;
+    @include media($breakpoint-sm) {
+      height: $page__header-height;
+    }
     .header__title {
       height: 100%;
-      background-size: contain;
+      background-size: 60%;
       background-position: center;
       background-repeat: no-repeat;
       @include filter(brightness(0) invert(1));
