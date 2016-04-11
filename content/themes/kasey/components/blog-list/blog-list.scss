@@ -15,9 +15,13 @@
         font-size: 0.6em;
       }
     }
-    .blog-list__read-more {
-      margin-top: 0.7rem;
-      display: block;
+    .blog-list__read-more-wrapper {
+      padding-top: 1rem;
+      text-align: center;
+      .blog-list__read-more {
+        margin-top: 0.7rem;
+        display: inline-block;
+      }
     }
   }
 }

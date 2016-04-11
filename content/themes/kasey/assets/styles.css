@@ -16,6 +16,11 @@ html body {
     color: #4a4e69; }
     html body a:visited {
       color: #4a4e69; }
+    html body a.link__boxed {
+      padding: 0.3rem 0.6rem;
+      text-decoration: none;
+      border: 0.5px solid #4a4e69;
+      font-size: 0.75rem; }
   html body h1 {
     font-size: 2.5rem; }
     @media screen and (min-width: 600px) {
@@ -113,9 +118,12 @@ html {
       padding-bottom: 1rem; }
     .blog-list .blog-list__post .blog-list__excerpt h1, .blog-list .blog-list__post .blog-list__excerpt h2, .blog-list .blog-list__post .blog-list__excerpt h3, .blog-list .blog-list__post .blog-list__excerpt h4, .blog-list .blog-list__post .blog-list__excerpt h5, .blog-list .blog-list__post .blog-list__excerpt h6 {
       font-size: 0.6em; }
-  .blog-list .blog-list__post .blog-list__read-more {
-    margin-top: 0.7rem;
-    display: block; }
+  .blog-list .blog-list__post .blog-list__read-more-wrapper {
+    padding-top: 1rem;
+    text-align: center; }
+    .blog-list .blog-list__post .blog-list__read-more-wrapper .blog-list__read-more {
+      margin-top: 0.7rem;
+      display: inline-block; }
 html {
   box-sizing: border-box; }
 

@@ -52,15 +52,15 @@ if (containerEl) {
         <nav className="pagination" role="navigation">
           {(pagination.prev) ? (
             <a
-              className="pagination__link pagination__link--newer-posts"
+              className="pagination__link pagination__link--newer-posts link__boxed"
               onClick={(e)=>this._onPaginationClick(e, pagination.prev)}
               href={"#page=" + pagination.prev}
-            ><i className="fa fa-angle-left"></i> Newer Posts</a>
+            ><i className="fa fa-angle-left"></i> Newer</a>
           ) : ''}
 
           {(pagination.next) ? (
             <a
-              className="pagination__link pagination__link--older-posts"
+              className="pagination__link pagination__link--older-posts link__boxed"
               onClick={(e)=>this._onPaginationClick(e, pagination.next)}
               href={"#page=" + pagination.next}
             >Older <i className="fa fa-angle-right"></i></a>
@@ -77,7 +77,9 @@ if (containerEl) {
           <section className="blog-list__excerpt">
             <div>
               <div dangerouslySetInnerHTML={post.preview_html} />
-              <a className="blog-list__read-more" href={post.url}>Read more..</a>
+              <div className="blog-list__read-more-wrapper">
+                <a className="blog-list__read-more link__boxed" href={post.url}>Read more..</a>
+              </div>
             </div>
           </section>
         </article>

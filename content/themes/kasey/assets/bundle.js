@@ -170,19 +170,19 @@
 	          pagination.prev ? React.createElement(
 	            'a',
 	            {
-	              className: 'pagination__link pagination__link--newer-posts',
+	              className: 'pagination__link pagination__link--newer-posts link__boxed',
 	              onClick: function onClick(e) {
 	                return _this._onPaginationClick(e, pagination.prev);
 	              },
 	              href: "#page=" + pagination.prev
 	            },
 	            React.createElement('i', { className: 'fa fa-angle-left' }),
-	            ' Newer Posts'
+	            ' Newer'
 	          ) : '',
 	          pagination.next ? React.createElement(
 	            'a',
 	            {
-	              className: 'pagination__link pagination__link--older-posts',
+	              className: 'pagination__link pagination__link--older-posts link__boxed',
 	              onClick: function onClick(e) {
 	                return _this._onPaginationClick(e, pagination.next);
 	              },
@@ -220,9 +220,13 @@
 	              null,
 	              React.createElement('div', { dangerouslySetInnerHTML: post.preview_html }),
 	              React.createElement(
-	                'a',
-	                { className: 'blog-list__read-more', href: post.url },
-	                'Read more..'
+	                'div',
+	                { className: 'blog-list__read-more-wrapper' },
+	                React.createElement(
+	                  'a',
+	                  { className: 'blog-list__read-more link__boxed', href: post.url },
+	                  'Read more..'
+	                )
 	              )
 	            )
 	          )

@@ -16,6 +16,12 @@ html body {
     &:visited {
       color: $base-link-color;
     }
+    &.link__boxed {
+      padding: 0.3rem 0.6rem;
+      text-decoration: none;
+      border: 0.5px solid $base-link-color;
+      font-size: 0.75rem;
+    }
   }
 
   h1 {
