@@ -143,7 +143,9 @@
 
 	    _onPaginationClick: function _onPaginationClick(e, pageNumber) {
 	      e.preventDefault();
-	      this._updatePage(pageNumber);
+	      if (pageNumber !== null) {
+	        this._updatePage(pageNumber);
+	      }
 	    },
 
 	    // run fetch on component mount
@@ -161,36 +163,38 @@
 	      var pagination = this.state.pagination;
 
 	      // pagination
+	      var prev = pagination.prev;
+	      var next = pagination.next;
 	      var Pagination = React.createElement(
 	        'div',
 	        null,
 	        React.createElement(
 	          'nav',
 	          { className: 'pagination', role: 'navigation' },
-	          pagination.prev ? React.createElement(
+	          React.createElement(
 	            'a',
 	            {
-	              className: 'pagination__link pagination__link--newer-posts link__boxed',
+	              className: 'pagination__link pagination__link--newer-posts link__boxed ' + (prev ? '' : 'link--disabled'),
 	              onClick: function onClick(e) {
 	                return _this._onPaginationClick(e, pagination.prev);
 	              },
-	              href: "#page=" + pagination.prev
+	              href: prev ? '#page=' + pagination.prev : '#'
 	            },
 	            React.createElement('i', { className: 'fa fa-angle-left' }),
 	            ' Newer'
-	          ) : '',
-	          pagination.next ? React.createElement(
+	          ),
+	          React.createElement(
 	            'a',
 	            {
-	              className: 'pagination__link pagination__link--older-posts link__boxed',
+	              className: 'pagination__link pagination__link--older-posts link__boxed ' + (next ? '' : 'link--disabled'),
 	              onClick: function onClick(e) {
 	                return _this._onPaginationClick(e, pagination.next);
 	              },
-	              href: "#page=" + pagination.next
+	              href: next ? '#page=' + pagination.next : '#'
 	            },
 	            'Older ',
 	            React.createElement('i', { className: 'fa fa-angle-right' })
-	          ) : ''
+	          )
 	        )
 	      );
 

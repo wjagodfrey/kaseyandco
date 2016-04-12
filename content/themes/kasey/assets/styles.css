@@ -16,11 +16,16 @@ html body {
     color: #4a4e69; }
     html body a:visited {
       color: #4a4e69; }
+    html body a.link--disabled {
+      color: #bfbfbf;
+      cursor: default; }
     html body a.link__boxed {
       padding: 0.6rem 0.8rem 0.5rem 0.8rem;
       text-decoration: none;
       border: 0.5px solid #888cab;
       font-size: 0.75rem; }
+      html body a.link__boxed.link--disabled {
+        border-color: #d9d9d9; }
   html body h1 {
     font-size: 2.5rem; }
     @media screen and (min-width: 600px) {

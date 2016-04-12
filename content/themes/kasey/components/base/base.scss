@@ -16,11 +16,18 @@ html body {
     &:visited {
       color: $base-link-color;
     }
+    &.link--disabled {
+      color: lighten($base-text-color, 75%);
+      cursor: default;
+    }
     &.link__boxed {
       padding: 0.6rem 0.8rem 0.5rem 0.8rem;
       text-decoration: none;
       border: 0.5px solid lighten($base-link-color, 25%);
       font-size: 0.75rem;
+      &.link--disabled {
+        border-color: lighten($base-text-color, 85%);
+      }
     }
   }
 

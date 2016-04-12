@@ -32,7 +32,9 @@ if (containerEl) {
 
     _onPaginationClick: function(e, pageNumber) {
       e.preventDefault();
-      this._updatePage(pageNumber);
+      if (pageNumber !== null) {
+        this._updatePage(pageNumber);
+      }
     },
 
     // run fetch on component mount
@@ -48,23 +50,21 @@ if (containerEl) {
       let pagination = this.state.pagination;
 
       // pagination
+      let prev = pagination.prev;
+      let next = pagination.next;
       let Pagination = <div>
         <nav className="pagination" role="navigation">
-          {(pagination.prev) ? (
-            <a
-              className="pagination__link pagination__link--newer-posts link__boxed"
-              onClick={(e)=>this._onPaginationClick(e, pagination.prev)}
-              href={"#page=" + pagination.prev}
-            ><i className="fa fa-angle-left"></i> Newer</a>
-          ) : ''}
+          <a
+            className={'pagination__link pagination__link--newer-posts link__boxed ' + (prev ? '' : 'link--disabled')}
+            onClick={(e)=>this._onPaginationClick(e, pagination.prev)}
+            href={prev ? '#page=' + pagination.prev : '#'}
+          ><i className="fa fa-angle-left"></i> Newer</a>
 
-          {(pagination.next) ? (
-            <a
-              className="pagination__link pagination__link--older-posts link__boxed"
-              onClick={(e)=>this._onPaginationClick(e, pagination.next)}
-              href={"#page=" + pagination.next}
-            >Older <i className="fa fa-angle-right"></i></a>
-          ) : ''}
+          <a
+            className={'pagination__link pagination__link--older-posts link__boxed ' + (next ? '' : 'link--disabled')}
+            onClick={(e)=>this._onPaginationClick(e, pagination.next)}
+            href={next ? '#page=' + pagination.next : '#'}
+          >Older <i className="fa fa-angle-right"></i></a>
         </nav>
       </div>
 
