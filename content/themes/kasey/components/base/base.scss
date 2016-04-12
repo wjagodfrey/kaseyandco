@@ -17,9 +17,9 @@ html body {
       color: $base-link-color;
     }
     &.link__boxed {
-      padding: 0.3rem 0.6rem;
+      padding: 0.6rem 0.8rem 0.5rem 0.8rem;
       text-decoration: none;
-      border: 0.5px solid $base-link-color;
+      border: 0.5px solid lighten($base-link-color, 25%);
       font-size: 0.75rem;
     }
   }
