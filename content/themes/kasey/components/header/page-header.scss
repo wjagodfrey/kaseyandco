@@ -4,6 +4,9 @@
   .header__background {
     height: $page__header-height - 40vh;
     @include media($breakpoint-sm) {
+      height: $page__header-height - 30vh;
+    }
+    @include media($breakpoint-md) {
       height: $page__header-height;
     }
     .header__title {

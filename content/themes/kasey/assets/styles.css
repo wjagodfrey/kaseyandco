@@ -314,6 +314,9 @@ html {
   height: 35vh; }
   @media screen and (min-width: 600px) {
     .page-template .header .header__background {
+      height: 45vh; } }
+  @media screen and (min-width: 800px) {
+    .page-template .header .header__background {
       height: 75vh; } }
   .page-template .header .header__background .header__title {
     height: 100%;
