@@ -642,7 +642,7 @@ html {
       margin: 0 4.1rem 0 4rem; }
 
 .post .post__read-other .post__read-other-post {
-  padding: 2rem 0 1rem; }
+  margin: 2rem 0 1rem; }
   .post .post__read-other .post__read-other-post.post__read-other-post--prev {
     float: right; }
   .post .post__read-other .post__read-other-post.post__read-other-post--next {

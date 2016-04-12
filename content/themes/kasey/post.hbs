@@ -60,16 +60,13 @@ the {body} of the default.hbs template, which contains our header/footer. }}
     </main>
 
     <aside class="post__read-other">
-      {{#next_post}}
-      <a class="post__read-other-post post__read-other-post--next" href="{{url}}">
+
+      <a class="post__read-other-post post__read-other-post--next link__boxed {{^next_post}}link--disabled{{/next_post}}" href="{{#next_post}}{{url}}{{else}}javascript: void 0{{/next_post}}">
         <i class="fa fa-angle-left"></i> Newer
       </a>
-      {{/next_post}}
-      {{#prev_post}}
-      <a class="post__read-other-post post__read-other-post--prev" href="{{url}}">
+      <a class="post__read-other-post post__read-other-post--prev link__boxed {{^prev_post}}link--disabled{{/prev_post}}" href="{{#prev_post}}{{url}}{{else}}javascript: void 0{{/prev_post}}">
         Older <i class="fa fa-angle-right"></i>
       </a>
-      {{/prev_post}}
     </aside>
 
   </div>
